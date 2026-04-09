@@ -1,0 +1,30 @@
+.DS_Store
+node_modules/
+
+# media
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.mp4
+*.mov
+*.mp3
+*.wav
+
+# file pesanti/progetto
+*.zip
+*.psd
+*.ai
+*.pdf
+
+# cartelle comuni
+assets/media/
+media/
+videos/
+images/
+img/
+tmp/
+export/
+exports/
+backup/
