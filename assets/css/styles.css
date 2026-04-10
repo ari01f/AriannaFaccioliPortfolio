@@ -5,6 +5,7 @@
   --gap: 0.5rem;
   --text: 15px;
   --leading: 1.3;
+  --ui-gap: clamp(0.6rem, 1vw, 1rem);
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif: Georgia, "Times New Roman", serif;
 }
@@ -171,8 +172,7 @@ h3 {
   max-width: min(48rem, calc(100% - 1rem));
 }
 
-.identity-links,
-.project-fixed-nav {
+.identity-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 0.9rem;
@@ -196,9 +196,9 @@ h3 {
   right: var(--pad);
   z-index: 3;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) max-content max-content max-content;
+  grid-template-columns: minmax(0, 1.55fr) minmax(14rem, 1fr) minmax(4.5rem, 0.35fr);
   align-items: start;
-  column-gap: clamp(0.6rem, 1vw, 1rem);
+  column-gap: var(--ui-gap);
   row-gap: 0.3rem;
   pointer-events: none;
 }
@@ -208,6 +208,19 @@ h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.floating-primary-nav,
+.floating-top-links,
+.project-fixed-nav {
+  min-width: 0;
+}
+
+.floating-primary-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  column-gap: var(--ui-gap);
 }
 
 .page-home .identity-name,
@@ -228,11 +241,46 @@ h3 {
 }
 
 .floating-top-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-self: end;
-  justify-content: flex-end;
-  gap: 0.25rem 0.9rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.25rem var(--ui-gap);
+}
+
+.floating-primary-nav .floating-label,
+.project-fixed-owner,
+.project-fixed-nav .project-fixed-label {
+  white-space: nowrap;
+}
+
+.project-fixed-bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 34rem);
+  align-items: start;
+  column-gap: var(--ui-gap);
+  row-gap: 0.3rem;
+  align-self: start;
+  margin: 0;
+  pointer-events: none;
+}
+
+.project-fixed-owner {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-fixed-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  row-gap: 0.25rem;
+  column-gap: var(--ui-gap);
 }
 
 .project-index {
@@ -277,18 +325,6 @@ h3 {
   gap: 0.5rem;
   padding: 0.35rem;
   color: var(--fg);
-}
-
-.project-fixed-bar {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  align-self: start;
-  margin: 0;
-  pointer-events: none;
 }
 
 .project-reading {
@@ -413,9 +449,17 @@ h3 {
     left: auto;
     right: auto;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) max-content max-content max-content;
+    grid-template-columns: minmax(0, 1fr) max-content;
     padding: 0 var(--pad) var(--pad);
     pointer-events: auto;
+  }
+
+  .floating-label--active-project {
+    grid-column: 1 / -1;
+  }
+
+  .floating-top-links {
+    justify-self: end;
   }
 
   .page-home .identity-name,
@@ -438,6 +482,7 @@ h3 {
 
   .project-fixed-bar {
     position: static;
+    grid-template-columns: minmax(0, 1fr) max-content;
     padding: var(--pad) var(--pad) 0;
     pointer-events: auto;
   }
@@ -485,9 +530,20 @@ h3 {
     gap: 0.2rem;
   }
 
+  .floating-primary-nav,
+  .project-fixed-nav {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
   .floating-top-links {
     justify-self: start;
     justify-content: flex-start;
+  }
+
+  .project-fixed-bar {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 
   .project-media-shell,

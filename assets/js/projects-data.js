@@ -137,8 +137,8 @@ export const projects = [
     ],
     links: [],
     preview: {
-      type: "image",
-      src: "home.png",
+      type: "video",
+      src: "preview.mov",
       alt: "Interspecie preview",
     },
     media: [
@@ -306,8 +306,8 @@ export const projects = [
     ],
     links: [],
     preview: {
-      type: "image",
-      src: "original_aef5ebbb15016e892bbfbf606297ba82.jpg",
+      type: "video",
+      src: "f1b3707b1e3682ebbc3a36f2ea25cd5a.mov",
       alt: "Dicor preview image",
     },
     media: [
