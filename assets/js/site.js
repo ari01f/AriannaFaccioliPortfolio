@@ -1,32 +1,22 @@
 import { getHomepageProjects, siteData, projects } from "./projects-data.js";
-import {
-  renderFloatingLinks,
-  renderIdentityLinks,
-  renderProjectIndexItem,
-} from "./render.js";
+import { renderFloatingLinks, renderProjectIndexItem } from "./render.js";
 
 const owners = document.querySelectorAll("[data-site-owner]");
-const label = document.querySelector("[data-site-label]");
 const bio = document.querySelector("[data-site-bio]");
-const links = document.querySelector("[data-site-links]");
 const topLinks = document.querySelector("[data-site-top-links]");
 const projectIndex = document.querySelector("[data-project-index]");
 const rightContent = document.querySelector(".right-content");
+const scrollRoot =
+  rightContent && getComputedStyle(rightContent).overflowY !== "visible"
+    ? rightContent
+    : null;
 
 owners.forEach((owner) => {
   owner.textContent = siteData.owner;
 });
 
-if (label) {
-  label.textContent = siteData.label;
-}
-
 if (bio) {
   bio.textContent = siteData.bio;
-}
-
-if (links) {
-  links.innerHTML = renderIdentityLinks(siteData.links);
 }
 
 if (topLinks) {
@@ -43,7 +33,7 @@ const projectTitleBySlug = new Map(
   projects.map(({ slug, title }) => [slug, title]),
 );
 
-if (activeProjectLabel && rightContent && mediaBlocks.length > 0) {
+if (activeProjectLabel && mediaBlocks.length > 0) {
   const visibleBlocks = new Set();
   const thresholds = Array.from({ length: 101 }, (_, index) => index / 100);
   let activeBlock = null;
@@ -83,7 +73,13 @@ if (activeProjectLabel && rightContent && mediaBlocks.length > 0) {
   function resolveActiveBlock() {
     frameId = 0;
 
-    const rootRect = rightContent.getBoundingClientRect();
+    const rootRect = scrollRoot
+      ? scrollRoot.getBoundingClientRect()
+      : {
+          top: 0,
+          bottom: window.innerHeight,
+          height: window.innerHeight,
+        };
     const candidates = visibleBlocks.size > 0 ? [...visibleBlocks] : mediaBlocks;
     let nextBlock = null;
     let highestRatio = 0;
@@ -134,14 +130,14 @@ if (activeProjectLabel && rightContent && mediaBlocks.length > 0) {
       queueActiveBlockUpdate();
     },
     {
-      root: rightContent,
+      root: scrollRoot,
       threshold: thresholds,
     },
   );
 
   mediaBlocks.forEach((block) => observer.observe(block));
 
-  rightContent.addEventListener("scroll", queueActiveBlockUpdate, {
+  (scrollRoot ?? window).addEventListener("scroll", queueActiveBlockUpdate, {
     passive: true,
   });
   window.addEventListener("resize", queueActiveBlockUpdate);

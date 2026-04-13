@@ -1,9 +1,7 @@
 export const siteData = {
-  owner: "ARIANNA FACCIOLI",
+  owner: "Arianna Faccioli",
   label: "Interaction designer and creative technologist",
-  bio: `Arianna Faccioli is an Italian creative technologist and multidisciplinary designer based in Bologna. She works across digital design, creative coding, and data visualization, focusing on how generative systems construct imaginaries, identities, and narratives.
-    She holds a degree in Industrial Design from the University of Bologna and a Master’s in Interaction & Experience Design from the University of the Republic of San Marino. Her practice combines technical experimentation with a critical approach, addressing the cultural and political dimensions of data-driven systems.
-    Her work explores how data, space, and sensory experience can be articulated into narrative-driven interactions. Through projects spanning exhibit design, sound design, creative coding, and web-based visual systems, she develops ways to translate complex processes into accessible and engaging visual and spatial experiences.`,
+  bio: ` Arianna Faccioli (IT) is a creative technologist and multidisciplinary designer working across digital design, creative coding, and data visualization — examining how generative systems construct identities and narratives, mostly in Bologna, and often elsewhere.`,
   links: [
     { label: "Email", href: "mailto:hello@ariannafaccioli.com" },
     { label: "Instagram", href: "https://www.instagram.com/" },
@@ -66,10 +64,12 @@ function createProject(config) {
 }
 
 export function getHomepageProjects() {
-  return projects.map(({ slug, category, year, preview }) => ({
+  return projects.map(({ slug, title, category, year, summary, subtitle, preview }) => ({
     slug,
+    title,
     category,
     year,
+    summary: summary || subtitle,
     preview:
       preview.type === "image"
         ? {
@@ -84,18 +84,18 @@ export const projects = [
   createProject({
     folder: "01-Prompted Identities",
     slug: "prompted-identities",
-    title: "PROMPTED IDENTITIES",
+    title: "Prompted Identities",
     subtitle: "Exploring representational bias in text-to-image models",
     category: "AI | Data Visualization | Critical AI",
     year: "2026",
     role: "Interaction design, art direction, prototyping",
     description:
-      "An interactive and informative platform based on a synthetic dataset of 4,000 images generated with Stable Diffusion. The project investigates how generative models construct visual identities across professions, revealing recurring patterns and biases embedded in training data.Through direct visualization, users can explore large-scale outputs, compare models, and navigate clusters generated via dimensionality reduction. The system integrates face analysis, object detection, and similarity mapping into an interactive interface designed to expose how AI systems visually encode identity.",
+      "An interactive and informative platform based on a synthetic dataset of 4,000 images generated with Stable Diffusion. The project investigates how generative models construct visual identities across professions, revealing recurring patterns and biases embedded in training data.",
 
     links: [],
     preview: {
       type: "video",
-      src: "filmati/similarity_x2.mov",
+      src: "filmati/preview.mov",
       alt: "Prompted Identities interface still",
     },
     media: [
@@ -166,7 +166,7 @@ export const projects = [
   createProject({
     folder: "03-Hemstacks",
     slug: "hemstacks",
-    title: "Hemstacks",
+    title: "Hemispherical Stacks",
     subtitle: "Speculative scenario visualization platform",
     category: "Digital experience",
     year: "2025",
@@ -349,9 +349,9 @@ export const projects = [
     ],
     links: [],
     preview: {
-      type: "image",
-      src: "DSC09068.jpg",
-      alt: "Radici preview image",
+      type: "video",
+      src: "preview.mov",
+      alt: "Radici preview video",
     },
     media: [
       {
@@ -392,9 +392,9 @@ export const projects = [
     ],
     links: [],
     preview: {
-      type: "image",
-      src: "DSCF1264_mod3.jpg",
-      alt: "Theremin900 preview image",
+      type: "video",
+      src: "theremin.mp4",
+      alt: "Theremin900 preview video",
     },
     media: [
       {
@@ -435,9 +435,9 @@ export const projects = [
     ],
     links: [],
     preview: {
-      type: "image",
-      src: "IMG_0501.jpg",
-      alt: "Admirari Silva preview image",
+      type: "video",
+      src: "preview.mp4",
+      alt: "Admirari Silva preview video",
     },
     media: [
       {
@@ -478,9 +478,9 @@ export const projects = [
     ],
     links: [],
     preview: {
-      type: "image",
-      src: "manifesti.jpg",
-      alt: "Displace Input preview image",
+      type: "video",
+      src: "teaser_finale_2.mp4",
+      alt: "Displace Input preview video",
     },
     media: [
       {

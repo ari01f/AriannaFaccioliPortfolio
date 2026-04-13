@@ -10,7 +10,7 @@ function resolveAssetPath(path) {
   return new URL(`../../${path}`, import.meta.url).href;
 }
 
-function createMedia(media, options = {}) {
+export function createMedia(media, options = {}) {
   const { controls = true, autoplay = false, loop = false, muted = false } =
     options;
   const source = resolveAssetPath(media.src);
@@ -28,90 +28,93 @@ function createMedia(media, options = {}) {
   return `<img class="single-project-media" src="${source}" alt="${media.alt || ""}" loading="lazy" />`;
 }
 
-function createLinks(links) {
-  if (!links?.length) {
-    return "";
-  }
-
-  return links
-    .map(
-      (link) =>
-        `<a href="${link.href}" target="_blank" rel="noreferrer">${link.label}</a>`,
-    )
-    .join("");
-}
-
 function createFloatingLinks(links) {
   if (!links?.length) {
     return "";
   }
 
-  return links
-    .map((link) => {
-      const fingerprint = `${link.label} ${link.href}`.toLowerCase();
-      let shortLabel = "";
+  const selectedLinks = [];
 
-      if (fingerprint.includes("instagram")) {
-        shortLabel = "IG";
-      } else if (fingerprint.includes("linkedin")) {
-        shortLabel = "LI";
-      }
+  links.forEach((link) => {
+    const fingerprint = `${link.label} ${link.href}`.toLowerCase();
 
-      if (!shortLabel) {
-        return "";
-      }
+    if (fingerprint.includes("instagram")) {
+      selectedLinks.push({
+        ...link,
+        compactLabel: "IG",
+        order: 0,
+      });
+    } else if (fingerprint.includes("mailto:") || fingerprint.includes("email")) {
+      selectedLinks.push({
+        ...link,
+        compactLabel: "mail",
+        order: 1,
+      });
+    }
+  });
 
-      return `<a class="floating-label floating-label--social" href="${link.href}" target="_blank" rel="noreferrer">${shortLabel}</a>`;
-    })
+  return selectedLinks
+    .sort((left, right) => left.order - right.order)
+    .map(
+      (link) =>
+        `<a class="floating-label floating-label--social" href="${link.href}" target="_blank" rel="noreferrer">${link.compactLabel}</a>`,
+    )
     .join("");
-}
-
-export function renderIdentityLinks(links) {
-  return createLinks(links);
 }
 
 export function renderFloatingLinks(links) {
   return createFloatingLinks(links);
 }
 
-function groupMediaItems(items) {
+export function groupMediaItems(items) {
   if (!items.length) {
     return [];
   }
 
-  if (items.length === 1) {
-    return [{ layout: "full", items: [items[0]] }];
-  }
-
-  if (items.length === 2) {
-    return [{ layout: "pair", items: items }];
-  }
-
-  const groups = [{ layout: "full", items: [items[0]] }];
-  let index = 1;
+  const groups = [];
+  let index = 0;
 
   while (index < items.length) {
-    const remaining = items.length - index;
-
-    if (remaining === 1) {
+    if (index === 0) {
       groups.push({ layout: "full", items: [items[index]] });
       index += 1;
+      continue;
+    }
+
+    const remaining = items.length - index;
+    const previous = groups[groups.length - 1];
+
+    if (previous.layout === "full") {
+      if (remaining >= 2) {
+        groups.push({ layout: "pair", items: items.slice(index, index + 2) });
+        index += 2;
+      } else {
+        groups.push({ layout: "full", items: [items[index]] });
+        index += 1;
+      }
     } else {
-      groups.push({ layout: "pair", items: items.slice(index, index + 2) });
-      index += 2;
+      groups.push({ layout: "full", items: [items[index]] });
+      index += 1;
     }
   }
 
   return groups;
 }
 
-export function renderProjectIndexItem({ slug, category, year, preview }) {
+export function renderProjectIndexItem({
+  slug,
+  title,
+  category,
+  year,
+  summary,
+  preview,
+}) {
   return `
     <article class="project-card" data-project-slug="${slug}" data-project-category="${category}" data-project-year="${year}">
       <a
         class="project-card-link"
         href="./projects/${slug}.html"
-        aria-label="Open project"
+        aria-label="Open ${title}"
       >
         <div class="project-media-shell" data-home-media-block>
           ${createMedia(preview, {
@@ -121,60 +124,38 @@ export function renderProjectIndexItem({ slug, category, year, preview }) {
             muted: preview.type === "video",
           })}
         </div>
+        <div class="project-card-copy">
+          <p class="project-card-caption">
+            <span class="project-card-title">${title}</span>${category ? `<span class="project-card-separator" aria-hidden="true">, </span><span class="project-chip">${category}</span>` : ""}${summary ? `<span class="project-card-separator" aria-hidden="true">, </span><span class="project-card-summary">${summary}</span>` : ""}
+          </p>
+          ${year ? `<span class="project-chip project-chip--year">${year}</span>` : ""}
+        </div>
       </a>
     </article>
   `;
 }
 
-export function renderProjectPage({
+export function renderProjectContent({
   title,
   subtitle,
   category,
   year,
   description,
-  media,
 }) {
-  const mediaMarkup = groupMediaItems(media)
-    .map((group) => {
-      const cells = group.items
-        .map(
-          (item) => `
-            <div class="project-media-cell">
-              <div class="project-media">
-                ${createMedia(item, {
-                  controls: item.type === "video",
-                  autoplay: false,
-                  loop: false,
-                  muted: false,
-                })}
-              </div>
-            </div>
-          `,
-        )
-        .join("");
-
-      return `<div class="project-media-row project-media-row--${group.layout}">${cells}</div>`;
-    })
-    .join("");
-
   return `
-    <article class="project-essay">
-      <section class="project-intro">
-        <div class="project-intro-main">
-          <h1 class="project-page-title">${title}</h1>
-          ${subtitle ? `<p class="project-page-subtitle">${subtitle}</p>` : ""}
-          <div class="project-intro-meta">
-            <p class="project-intro-category">${category}</p>
-            <p class="project-intro-year">${year}</p>
-          </div>
-        </div>
-        ${description ? `<div class="project-intro-side"><p class="project-page-description">${description}</p></div>` : ""}
-      </section>
-
-      <section class="project-sequence">
-        ${mediaMarkup}
-      </section>
-    </article>
+    <div class="right-content">
+      <div class="project-metadata">
+        <h1 class="project-page-title">${title}</h1>
+        ${subtitle ? `<p class="project-page-subtitle">${subtitle}</p>` : ""}
+        <p class="project-intro-category">${category}</p>
+        <p class="project-intro-year">${year}</p>
+      </div>
+    </div>
+    <div class="identity-column">
+      <div class="sticky-left">
+        <p class="identity-bio">${description}</p>
+      </div>
+    </div>
   `;
 }
 
@@ -208,7 +189,7 @@ export function renderVisualExperimentsPage(experiments) {
     <article class="project-essay visual-experiments-essay">
       <section class="project-intro visual-experiments-intro">
         <div class="project-intro-main">
-          <p class="project-intro-meta">VISUAL EXPERIMENTS</p>
+          <p class="project-intro-meta">Visual experiments</p>
           <h1 class="project-page-title">Independent visual studies.</h1>
         </div>
         <div class="project-intro-side">
