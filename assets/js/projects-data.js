@@ -271,7 +271,7 @@ export const projects = [
     year: "2025",
     role: "AI | Visual design | Shader",
     summary:
-      "A system-oriented interface project balancing informational complexity with clarity and pace.",
+      "Speculative scenario visualization platform",
     description:
       "Hemispherical Stacks is a scenario fiction project developed in collaboration with <a href=\"https://gigadesignstudio.com/projects/antikythera-hemispherical-stacks\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">Giga</a> during my internship experience, for <a href=\"https://journal.antikythera.org\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">Antikythera</a>, an editorial initiative by MIT Press. The project reworks theoretical and research-based content not in the form of articles, but through explorable spaces: scenographic environments that translate the dynamics of contemporary computation and their geopolitical implications into an interactive and visual form.",
     links: [],
@@ -341,14 +341,14 @@ export const projects = [
     folder: "04-Recall",
     slug: "recall",
     title: "Recall",
-    subtitle: "Fragments, memory, and visual reconstruction",
-    category: "Visual narrative",
+    subtitle: "Audio-reactive visual system for live performance",
+    category: "Creative Coding | Audiovisual | Real-time",
     year: "2025",
     role: "Research, narrative design, visual composition",
     summary:
-      "A project organized around memory, sequence, and the reconstruction of fragmented material.",
+      "Audio-reactive visual system for live performance",
     description:
-      "Replace this placeholder with a short editorial description of the concept, medium, and final form of the project.",
+      "A real-time visual system developed in TouchDesigner during my internship experience at Giga. The system analyzes audio input from Recall’s .WAV format and generates dynamic visuals through an autopilot mode, while also allowing manual intervention for live performance control.",
     credits: [
       "Project credits placeholder",
       "Production notes can be listed here",
@@ -364,7 +364,7 @@ export const projects = [
         type: "image",
         src: "original_2796b02af6a170fcccbd5b1eb8845cd5.jpg",
         alt: "Recall still",
-        caption: "Primary still.",
+        caption: "The project combines generative graphics with sound analysis, creating a flexible system that adapts to both automated and performative contexts.",
       },
       {
         type: "image",
@@ -379,19 +379,58 @@ export const projects = [
         caption: "Secondary still.",
       },
     ],
+    blocks: [
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "original_2796b02af6a170fcccbd5b1eb8845cd5.jpg",
+          alt: "Recall still",
+        }
+      },
+      {
+        type: "caption",
+        content: "The project combines generative graphics with sound analysis, creating a flexible system that adapts to both automated and performative contexts."
+      },
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "original_a8645100df1f1e32dbd1da85be963689.gif",
+          alt: "The visual engine is based on processed video backgrounds that are deliberately degraded through pixelation and synthesis techniques. This transformation reduces the source footage into abstract geometric structures, which are then recomposed and blended according to the rhythm and intensity of the audio input.",
+        }
+      },
+      {
+        type: "caption",
+        content: "The visual engine is based on processed video backgrounds that are deliberately degraded through pixelation and synthesis techniques. This transformation reduces the source footage into abstract geometric structures, which are then recomposed and blended according to the rhythm and intensity of the audio input.."
+      },
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "original_bcade867e664b3cdb9876c55323a44ad.jpg",
+          alt: "Recall secondary still",
+        }
+      },
+      {
+        type:"image",
+        src:"original_737634f2423a8bd06b197b4983ac9665.jpg",
+      }
+    
+    ]
   }),
   createProject({
     folder: "05-Humuscene",
     slug: "humuscene",
     title: "Humuscene",
-    subtitle: "Ecological imaginaries in simulated space",
-    category: "Immersive worldbuilding",
+    subtitle: "Speculative VR data environment based on photogrammetry",
+    category: "Speculative Design | VR | Point cloud",
     year: "2025",
-    role: "Environment design, interaction concept, audiovisual direction",
+    role: "Speculative Design | VR | Point cloud",
     summary:
       "A multisensory environment staging ecological imaginaries through moving image and simulated space.",
     description:
-      "This project page can later hold the conceptual frame, technical workflow, and the intended visitor trajectory through the work.",
+      "A speculative 3D data visualization experienced in VR, exploring long-term environmental transformations under climate change.",
     credits: [
       "Project credits placeholder",
       "Software pipeline or collaboration notes can be added here",
@@ -405,12 +444,6 @@ export const projects = [
     media: [
       {
         type: "video",
-        src: "Humus_Cene_Video.mp4",
-        alt: "Humuscene documentation video",
-        caption: "Primary documentation clip.",
-      },
-      {
-        type: "video",
         src: "mappa_def2.mp4",
         alt: "Humuscene environment sequence",
         caption: "Environment sequence.",
@@ -422,19 +455,50 @@ export const projects = [
         caption: "Procedural visual fragment.",
       },
     ],
+    blocks: [
+      {
+        type: "html",
+        content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1076702543?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Humuscene\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>"
+      },
+      {
+        type: "caption",
+        content: "Built from a photogrammetric scan of the Monastery of Santa Chiara, the project transforms a real-world point cloud into a stratified, evolving environment shaped by decay, growth, and synthetic matter. The experience uses immersive interaction to make speculative data perceptible, shifting from abstract information to embodied exploration."
+      },
+      {
+        type: "two-column",
+        items: [
+          {
+            type: "image",
+            src: "cloud_compare-1.png",
+            alt: "Humuscene procedural animation",
+            caption: "Procedural animation fragment."
+          },
+          {
+            type: "image",
+            src: "animazione_procedurale.gif",
+            alt: "Humuscene procedural animation 2",
+            caption: "Procedural animation fragment."
+          }, 
+            ]
+      },
+      {
+        type: "caption",
+        content: "The project begins with a photogrammetric scan of the site captured using Webinar, generating a detailed point cloud that is cleaned and processed to form the base environment. The dataset is then imported into Blender, where the space is structured into three temporal scenarios (2150, 2500, 3000).Each environment is developed through procedural animation systems that simulate the growth of fungi and invasive species, designed to be adaptable across different spatial contexts. Atmospheric effects are integrated to reinforce depth and immersion, combining realistic rendering with speculative visual cues derived from post-apocalyptic environments."
+      }
+    ]
   }),
   createProject({
     folder: "06-Dicor",
     slug: "dicor",
-    title: "Dicor",
-    subtitle: "Material surfaces translated into interface behaviour",
-    category: "Material interface",
+    title: "Dicor- Spirito Libro",
+    subtitle: "Interactive mini-game for event and book launch",
+    category: "Game design | Interaction design | Creative coding",
     year: "2025",
-    role: "Interaction design, prototyping, visual system",
+    role: "Game design | Interaction design | Creative coding",
     summary:
       "An exploration of material language, surface, and digital translation through texture and motion.",
     description:
-      "Use this text field for the final project summary and for describing the relationship between the tactile and digital dimensions of the work.",
+      "A small interactive video game developed at Giga Design Studio for Dicor, designed for the presentation event and launch of the book Spirito Libro. The project translates the publication’s identity into a playable format, creating a simple but engaging interaction that supports the event experience and audience participation.",
     credits: [
       "Project credits placeholder",
       "Fabrication or technical support can be listed here",
@@ -447,10 +511,9 @@ export const projects = [
     },
     media: [
       {
-        type: "image",
-        src: "original_81b074c6e9155dbba907415816b7e034.jpg",
+        type: "video",
+        src: "f1b3707b1e3682ebbc3a36f2ea25cd5a.mov",
         alt: "Dicor still",
-        caption: "Primary still.",
       },
       {
         type: "video",
@@ -460,28 +523,30 @@ export const projects = [
       },
       {
         type: "video",
-        src: "9bba3515df0cb4d281fe63ff5cfd5315.mp4",
+        src: "b05a77a3c24333a4d7760d6cdd5e07f6.mp4",
         alt: "Dicor supporting video",
         caption: "Supporting video excerpt.",
       },
-    ],
-  }),
+      {
+        type:"image",
+        src:"original_05b6e010f6076514f3f91f7369f1e9eb.jpg",
+      },
+   ]
+    
+      },
+  ),
   createProject({
     folder: "07-Radici",
     slug: "radici",
     title: "Radici",
-    subtitle: "Touch, memory, and embodied presence",
-    category: "Interactive installation",
+    subtitle: "Generative scenography for theater",
+    category: "AI | Creative Coding | Real Time visuals",
     year: "2025",
     role: "Interaction concept, experience design, documentation",
     summary:
-      "A project shaped around touch and memory within an interactive spatial environment.",
+      "A generative visual installation for the performance Elena by Euripides. The project simulates organic growth through fractal and coral-like structures, creating a dynamic stage environment.",
     description:
       "This space is reserved for a concise description of the concept, interaction model, and role of the installation environment.",
-    credits: [
-      "Project credits placeholder",
-      "Venue or workshop support can be added here",
-    ],
     links: [],
     preview: {
       type: "video",

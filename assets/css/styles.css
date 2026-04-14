@@ -155,6 +155,14 @@ h3 {
   letter-spacing: -0.01em;
 }
 
+.page-project .project-page-title,
+.page-project .project-page-subtitle,
+.page-project .project-intro-meta,
+.page-project .project-intro-category,
+.page-project .project-intro-year {
+  font-size: 29px;
+}
+
 .project-page-description,
 .identity-bio,
 .project-card-summary,
@@ -365,31 +373,29 @@ h3 {
 .project-media-shell {
   position: relative;
   width: 100%;
-  height: 70vh;
-  min-height: 30rem;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .single-project-media {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
   object-position: center;
+  margin: 0 auto;
 }
 
 .page-project .project-media .single-project-media {
   position: static;
   width: 100%;
   height: auto;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .project-media-row--pair .project-media .single-project-media,
 .project-media-row--multi .project-media .single-project-media {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .project-overlay {
@@ -556,24 +562,22 @@ h3 {
 .project-media {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .project-media-row--full .project-media {
-  height: min(84vh, 980px);
-  min-height: 30rem;
+  height: auto;
 }
 
 .project-media-row--pair .project-media,
 .project-media-row--multi .project-media {
-  height: min(62vh, 760px);
-  min-height: 22rem;
+  height: auto;
 }
 
 .project-media-row--pair .project-media .single-project-media,
 .project-media-row--multi .project-media .single-project-media {
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 /* ===== BLOCK-BASED LAYOUT SYSTEM ===== */
@@ -582,35 +586,42 @@ h3 {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 /* Full-width media block */
 .layout-block--media-full {
   gap: 0;
+  margin-bottom: 1.5rem;
+}
+
+.layout-block--caption {
+  margin-bottom: 2rem;
 }
 
 .media-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .media-container--full {
-  height: min(84vh, 980px);
-  min-height: 30rem;
+  height: auto;
 }
 
 .media-container--column {
-  height: min(62vh, 760px);
-  min-height: 22rem;
+  height: auto;
 }
 
 .media-container .single-project-media {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: static;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
   object-position: center;
 }
 

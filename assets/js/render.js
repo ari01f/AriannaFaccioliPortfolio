@@ -226,6 +226,18 @@ export function renderCaptionBlock(text) {
   `;
 }
 
+export function renderHtmlBlock(content) {
+  if (!content) {
+    return "";
+  }
+
+  return `
+    <div class="layout-block layout-block--html">
+      ${content}
+    </div>
+  `;
+}
+
 export function renderProjectBlocks(blocks) {
   if (!Array.isArray(blocks) || blocks.length === 0) {
     return "";
@@ -240,6 +252,8 @@ export function renderProjectBlocks(blocks) {
           return renderTwoColumnBlock(block.items);
         case "caption":
           return renderCaptionBlock(block.content);
+        case "html":
+          return renderHtmlBlock(block.content);
         default:
           return "";
       }
