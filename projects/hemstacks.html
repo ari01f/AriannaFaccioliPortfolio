@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body class="page-project" data-project-slug="hemstacks">
-    <header class="project-fixed-bar" aria-label="Project navigation frame">
-      <a class="project-fixed-owner" href="../index.html" data-site-owner></a>
-      <div class="project-fixed-nav">
-        <a class="project-fixed-label" href="../index.html">Selected works</a>
-        <a class="project-fixed-label" href="../visual-experiments.html">Visual experiments</a>
+    <nav class="floating-labels" aria-label="Primary navigation">
+      <div class="floating-media-strip">
+        <span class="floating-label floating-label--active-project" data-active-project></span>
+        <a class="floating-label floating-label--works" href="../index.html">Selected works</a>
+        <a class="floating-label floating-label--experiments" href="../visual-experiments.html">Visual experiments</a>
       </div>
-    </header>
+      <div class="floating-bio-strip" aria-label="Contact links">
+        <a class="identity-name" href="../index.html" data-site-owner></a>
+        <div data-site-top-links></div>
+      </div>
+    </nav>
     <main class="project-reading" data-project-page></main>
     <script type="module" src="../assets/js/project-page.js"></script>
   </body>

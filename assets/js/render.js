@@ -143,20 +143,108 @@ export function renderProjectContent({
   description,
 }) {
   return `
-    <div class="right-content">
-      <div class="project-metadata">
-        <h1 class="project-page-title">${title}</h1>
-        ${subtitle ? `<p class="project-page-subtitle">${subtitle}</p>` : ""}
-        <p class="project-intro-category">${category}</p>
-        <p class="project-intro-year">${year}</p>
+    <section class="project-page-intro" aria-label="Project introduction">
+      <div class="right-content">
+        <div class="project-metadata">
+          <h1 class="project-page-title">${title}</h1>
+          ${subtitle ? `<p class="project-page-subtitle">${subtitle}</p>` : ""}
+          <p class="project-intro-category">${category}</p>
+          <p class="project-intro-year">${year}</p>
+        </div>
       </div>
-    </div>
-    <div class="identity-column">
-      <div class="sticky-left">
-        <p class="identity-bio">${description}</p>
+      <div class="identity-column">
+        <div class="sticky-left">
+          <p class="identity-bio">${description}</p>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+// ===== BLOCK-BASED LAYOUT SYSTEM =====
+
+export function renderMediaFullBlock(media) {
+  return `
+    <div class="layout-block layout-block--media-full">
+      <div class="media-container media-container--full">
+        ${createMedia(media, {
+          controls: false,
+          autoplay: media.type === "video",
+          loop: media.type === "video",
+          muted: media.type === "video",
+        })}
       </div>
     </div>
   `;
+}
+
+export function renderTwoColumnBlock(items) {
+  if (!Array.isArray(items) || items.length === 0) {
+    return "";
+  }
+
+  const columns = items.map((item) => {
+    if (item.type === "text") {
+      return `
+        <div class="column column--text">
+          <p class="column-text">${item.content}</p>
+        </div>
+      `;
+    } else {
+      // Media item
+      return `
+        <div class="column column--media">
+          <div class="media-container media-container--column">
+            ${createMedia(item, {
+              controls: false,
+              autoplay: item.type === "video",
+              loop: item.type === "video",
+              muted: item.type === "video",
+            })}
+          </div>
+        </div>
+      `;
+    }
+  }).join("");
+
+  return `
+    <div class="layout-block layout-block--two-column">
+      <div class="two-column-grid">
+        ${columns}
+      </div>
+    </div>
+  `;
+}
+
+export function renderCaptionBlock(text) {
+  if (!text) return "";
+  
+  return `
+    <div class="layout-block layout-block--caption">
+      <p class="caption-text">${text}</p>
+    </div>
+  `;
+}
+
+export function renderProjectBlocks(blocks) {
+  if (!Array.isArray(blocks) || blocks.length === 0) {
+    return "";
+  }
+
+  return blocks
+    .map((block) => {
+      switch (block.type) {
+        case "media-full":
+          return renderMediaFullBlock(block.media);
+        case "two-column":
+          return renderTwoColumnBlock(block.items);
+        case "caption":
+          return renderCaptionBlock(block.content);
+        default:
+          return "";
+      }
+    })
+    .join("");
 }
 
 export function renderVisualExperimentsPage(experiments) {

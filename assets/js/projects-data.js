@@ -17,6 +17,32 @@ function withFolder(folder, media) {
   };
 }
 
+function processBlocks(folder, blocks) {
+  if (!blocks || !Array.isArray(blocks)) {
+    return undefined;
+  }
+
+  return blocks.map((block) => {
+    if (block.type === "media-full" && block.media) {
+      return {
+        ...block,
+        media: withFolder(folder, block.media),
+      };
+    } else if (block.type === "two-column" && block.items) {
+      return {
+        ...block,
+        items: block.items.map((item) => {
+          if (item.type === "text") {
+            return item;
+          }
+          return withFolder(folder, item);
+        }),
+      };
+    }
+    return block;
+  });
+}
+
 function createProject(config) {
   const {
     folder,
@@ -29,6 +55,7 @@ function createProject(config) {
     description = "",
     preview,
     media,
+    blocks = undefined,
   } = config;
   const project = {
     folder,
@@ -41,6 +68,7 @@ function createProject(config) {
     description,
     preview: withFolder(folder, preview),
     media: media.map((item) => withFolder(folder, item)),
+    ...(blocks ? { blocks: processBlocks(folder, blocks) } : {}),
   };
 
   const prefix = `${folder}/`;
@@ -90,7 +118,7 @@ export const projects = [
     year: "2026",
     role: "Interaction design, art direction, prototyping",
     description:
-      "An interactive and informative platform based on a synthetic dataset of 4,000 images generated with Stable Diffusion. The project investigates how generative models construct visual identities across professions, revealing recurring patterns and biases embedded in training data.",
+      "An interactive and informative platform based on a synthetic dataset of 4,000 images generated with Stable Diffusion. The project investigates how generative models construct visual identities across professions, revealing recurring patterns and biases embedded in training data. The project is publicly available on <a href=\"https://ari01f.github.io/Prompted-Identities/landing.html\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">GitHub</a>, where its structure and methodology can be further explored.",
 
     links: [],
     preview: {
@@ -100,41 +128,77 @@ export const projects = [
     },
     media: [
       {
-       type: "video",
-      src: "filmati/similarity_x2.mov",
-      alt: "Prompted Identities interface still",
+        type: "video",
+        src: "filmati/similarity_x2.mov",
+        alt: "Prompted Identities interface still",
+        caption: "Through direct visualization, users can explore large-scale outputs, compare models, and navigate clusters generated via dimensionality reduction. The system integrates face analysis, object detection, and similarity mapping into an interactive interface designed to expose how AI systems visually encode identity.",
       },
       {
         type: "video",
-        src: "filmati/About.mov",
-        poster: "images/Prompted-identities-about.png",
-        alt: "Prompted Identities screen recording",
-        caption: "Short recording of the interface behaviour.",
-      },
-      {
-        type: "image",
-        src: "images/Prompted-identities-similarity.png",
-        alt: "Prompted Identities comparison view",
-        caption: "Comparison and similarity view.",
+        src: "workinprogress/screenrecord.mp4",
+        alt: "Prompted Identities interaction demo",
+        caption: "Interactive demonstration of the platform."
       },
     ],
+    blocks: [
+      {
+        type: "media-full",
+        media: {
+          type: "video",
+          src: "filmati/About_x2.mov",
+          alt: "Prompted Identities interface still",
+        }
+      },
+      {
+        type: "caption",
+        content: "The About section introduces the critical context of the project, focusing on large-scale datasets such as LAION-5B and the implications of their opacity. Through a scrolling-telling structure, the content unfolds progressively, making the relationship between data collection, classification, and generation more legible. Rather than a linear narrative, the section is layered: as the user scrolls, connections emerge between datasets, models, and representation, highlighting how identity is reduced to computable and often stereotyped categories."
+      },
+            {
+        type: "media-full",
+        media: {
+          type: "video",
+          src: "filmati/similarity_x2.mov",
+          alt: "Prompted Identities interface still",
+        }
+      },
+      {
+        type: "caption",
+        content: "Through direct visualization, users can explore large-scale outputs, compare models, and navigate clusters generated via dimensionality reduction. The system integrates face analysis, object detection, and similarity mapping into an interactive interface designed to expose how AI systems visually encode identity."
+      },
+      {
+        type: "two-column",
+        items: [
+          {
+            type: "video",
+            src: "workinprogress/ANTEPRIMA.mp4",
+            alt: "Prompted Identities detailed exploration"
+          },
+          {
+            type: "video",
+            src: "workinprogress/screenrecord.mp4",
+            alt: "Prompted Identities interaction demo"
+          },
+        
+        ]
+      },
+      {
+        type: "caption",
+        content: "The project incorporates a computational analysis layer applied to generated faces, using face analysis models to estimate attributes such as age, gender, and ethnicity. These parameters are aggregated and compared to identify recurring patterns and statistical distortions, making explicit the underlying logic through which generative systems infer and standardize identity."
+      }
+    ]
   }),
   createProject({
     folder: "02-Interspecie",
     slug: "interspecie",
     title: "Interspecie",
     subtitle: "Ecological coexistence through data visualization",
-    category: "Speculative installation",
+    category: "Data Visualization | Ecology | Website",
     year: "2025",
     role: "Concept, interaction design, spatial storytelling",
     summary:
-      "A speculative installation structured around cohabitation, perception, and relational ecologies.",
+      "Ecological coexistence through data visualization",
     description:
-      "An interactive visualization platform based on iNaturalist observations from the Parco Regionale del Fiume Sile. The project reorganizes biodiversity data into spatial categories that merge natural and human-made environments, highlighting coexistence, adaptation, and ecological imbalance. Users navigate a layered system that progressively reveals environmental strata and species distribution, integrating clustering and filtering to explore biological classifications, endangered species, and invasive dynamics.",
-    credits: [
-      "Project credits placeholder",
-      "Institutional or production partners can be added here",
-    ],
+      "An interactive visualization platform based on iNaturalist observations from the Parco Regionale del Fiume Sile. The project reorganizes biodiversity data into spatial categories that merge natural and human-made environments, highlighting coexistence, adaptation, and ecological imbalance.The project is publicly available on <a href=\"https://ari01f.github.io/Interspecie_definitivo/intro.html\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">GitHub</a>.",
     links: [],
     preview: {
       type: "video",
@@ -143,25 +207,60 @@ export const projects = [
     },
     media: [
       {
-        type: "image",
-        src: "1.png",
-        alt: "Interspecie still",
-        caption: "Primary visual documentation.",
-      },
-      {
         type: "video",
-        src: "video.mov",
-        poster: "home.png",
-        alt: "Interspecie video",
-        caption: "Motion excerpt from the project.",
+        src: "preview.mov",
+        alt: "Interspecie still",
+        caption: "Data is parsed and reorganized into hybrid spatial categories combining ecological and anthropogenic elements. The system includes clustering logic based on taxonomy, origin, and conservation status, and a scroll-driven structure that progressively reveals environmental layers. Each observation is linked to geolocation and hierarchical biological metadata.",
       },
       {
-        type: "image",
-        src: "6.jpg",
-        alt: "Interspecie installation view",
-        caption: "Secondary installation view.",
+        type:"video",
+        src:"scrolling_x2.mov",
+        alt: "Interspecie scrolling demo",
+        caption: "Users navigate a layered system that progressively reveals environmental strata and species distribution, integrating clustering and filtering to explore biological classifications, endangered species, and invasive dynamics."
       },
+      
     ],
+     blocks: [
+      {
+        type: "media-full",
+        media: {
+          type: "video",
+          src: "preview.mov",
+          alt: "Prompted Identities interface still",
+        }
+      },
+      {
+        type: "caption",
+        content: "Data is parsed and reorganized into hybrid spatial categories combining ecological and anthropogenic elements. The system includes clustering logic based on taxonomy, origin, and conservation status, and a scroll-driven structure that progressively reveals environmental layers. Each observation is linked to geolocation and hierarchical biological metadata."
+      },
+            {
+        type: "media-full",
+        media: {
+          type: "video",
+          src: "scrolling_x2.mov",
+          alt: "Prompted Identities interface still",
+        }
+      },
+      {
+        type: "caption",
+        content: "Users navigate a layered system that progressively reveals environmental strata and species distribution, integrating clustering and filtering to explore biological classifications, endangered species, and invasive dynamics."
+      },
+      {
+        type: "two-column",
+        items: [
+          {
+            type: "image",
+            src: "home.png",
+            alt: "Interspecie homepage"
+          },
+          {
+            type: "image",
+            src: "2.jpg",
+            alt: "Interspecie filtering system"
+          }
+        ]
+      }
+    ]
   }),
   createProject({
     folder: "03-Hemstacks",
@@ -174,7 +273,7 @@ export const projects = [
     summary:
       "A system-oriented interface project balancing informational complexity with clarity and pace.",
     description:
-      "The platform presents speculative scenarios as visual narratives, translating theoretical research into navigable, image-based environments.The work focuses on rendering scenario fiction through generative visual systems and structured layouts, allowing users to explore complex hypotheses as spatial and visual constructs rather than linear text.",
+      "Hemispherical Stacks is a scenario fiction project developed in collaboration with <a href=\"https://gigadesignstudio.com/projects/antikythera-hemispherical-stacks\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">Giga</a> during my internship experience, for <a href=\"https://journal.antikythera.org\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">Antikythera</a>, an editorial initiative by MIT Press. The project reworks theoretical and research-based content not in the form of articles, but through explorable spaces: scenographic environments that translate the dynamics of contemporary computation and their geopolitical implications into an interactive and visual form.",
     links: [],
     preview: {
       type: "video",
@@ -184,23 +283,59 @@ export const projects = [
     media: [
       {
         type: "video",
-        src: "09357ad327523e37963714fd834273ad.mov",
-        alt: "Hemstacks interface view",
-        caption: "Key interface view.",
-      },
-      {
-        type: "video",
         src: "f165baedc12a49ef5537e64511e5e17e.mp4",
-        alt: "Hemstacks motion study",
-        caption: "Prototype or motion study.",
+        alt: "Hemstacks interface view",
+        caption: "The project constructs speculative dioramas derived from research texts and articles published on the Antikythera platform.",
       },
       {
         type: "image",
         src: "original_2e464e39921b0251e652f37387e6cf07.png",
         alt: "Hemstacks supporting still",
-        caption: "Supporting still.",
+        caption: "Supporting still."
       },
     ],
+    blocks: [
+      {
+        type: "media-full",
+        media: {
+          type: "video",
+          src: "f165baedc12a49ef5537e64511e5e17e.mp4",
+          alt: "Hemstacks interface view",
+        }
+      },
+      {
+        type: "caption",
+        content: "The project constructs speculative dioramas derived from research texts and articles published on the Antikythera platform. Rather than illustrating concepts, the system translates extracted theoretical elements into spatial compositions through an iterative prompting process. Infrastructure, extraction, and computation are treated as spatial components, generating environments that function as constructed scenarios rather than representations."
+      },
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "original_1980e37e90f766fcaf83854fb6aa7217.png",
+          alt: "Hemstacks scenario visualization",
+        }
+      },
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "original_37ff6ac79ecf99113c41271e24bc0f7d.png",
+          alt: "Hemstacks environment detail",
+        }
+      },
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "original_6556c6ca3810e6309101f71cd714b71a.png",
+          alt: "Hemstacks spatial composition",
+        }
+      },
+      {
+        type:"caption",
+        content:"The images are transformed into three-dimensional spaces using depth maps generated with ComfyUI. Interaction is driven by a shader that combines depth, luminance, and cursor position, reconstructing each scene as a responsive field rather than a static image. Visibility is partial and dynamic: elements emerge locally through interaction and recede outside the focal area."
+      }
+    ]
   }),
   createProject({
     folder: "04-Recall",
