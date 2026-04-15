@@ -190,6 +190,14 @@ export function renderTwoColumnBlock(items) {
           <p class="column-text">${item.content}</p>
         </div>
       `;
+    } else if (item.type === "html") {
+      return `
+        <div class="column column--media">
+          <div class="media-container media-container--column">
+            ${item.content || ""}
+          </div>
+        </div>
+      `;
     } else {
       // Media item
       return `
