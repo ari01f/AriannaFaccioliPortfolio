@@ -10,9 +10,13 @@ export const siteData = {
 };
 
 function withFolder(folder, media) {
+  if (!media) {
+    return media;
+  }
+
   return {
     ...media,
-    src: `${folder}/${media.src}`,
+    ...(media.src ? { src: `${folder}/${media.src}` } : {}),
     ...(media.poster ? { poster: `${folder}/${media.poster}` } : {}),
   };
 }
@@ -24,6 +28,13 @@ function processBlocks(folder, blocks) {
 
   return blocks.map((block) => {
     if (block.type === "media-full" && block.media) {
+      if (block.media.type === "html") {
+        return {
+          type: "html",
+          content: block.media.content,
+        };
+      }
+
       return {
         ...block,
         media: withFolder(folder, block.media),
@@ -32,7 +43,7 @@ function processBlocks(folder, blocks) {
       return {
         ...block,
         items: block.items.map((item) => {
-          if (item.type === "text") {
+          if (item.type === "text" || item.type === "html") {
             return item;
           }
           return withFolder(folder, item);
@@ -54,7 +65,7 @@ function createProject(config) {
     summary = "",
     description = "",
     preview,
-    media,
+    media = [],
     blocks = undefined,
   } = config;
   const project = {
@@ -84,7 +95,7 @@ function createProject(config) {
     }
   }
 
-  if (project.media.length < 2) {
+  if (!project.blocks && project.media.length < 2) {
     throw new Error(`${project.slug} must contain at least 2 media items.`);
   }
 
@@ -458,7 +469,7 @@ export const projects = [
     blocks: [
       {
         type: "html",
-        content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1076702543?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Humuscene\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>"
+        content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1076702543?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Humuscene\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>"
       },
       {
         type: "caption",
@@ -496,7 +507,7 @@ export const projects = [
     year: "2025",
     role: "Game design | Interaction design | Creative coding",
     summary:
-      "An exploration of material language, surface, and digital translation through texture and motion.",
+      "Interactive mini-game for event and book launch",
     description:
       "A small interactive video game developed at Giga Design Studio for Dicor, designed for the presentation event and launch of the book Spirito Libro. The project translates the publication’s identity into a playable format, creating a simple but engaging interaction that supports the event experience and audience participation.",
     credits: [
@@ -546,7 +557,7 @@ export const projects = [
     summary:
       "A generative visual installation for the performance Elena by Euripides. The project simulates organic growth through fractal and coral-like structures, creating a dynamic stage environment.",
     description:
-      "This space is reserved for a concise description of the concept, interaction model, and role of the installation environment.",
+      "A generative visual installation for the performance Elena by Euripides. The project simulates organic growth through fractal and coral-like structures, creating a dynamic stage environment.",
     links: [],
     preview: {
       type: "video",
@@ -573,23 +584,62 @@ export const projects = [
         caption: "Spatial context view.",
       },
     ],
+    blocks: [
+      {
+        type: "html",
+        content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1095380945?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"scenografia3\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>"
+      },
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "DSC08915.jpg",
+          alt: "Radici still",
+        }
+      },
+      {
+        type: "media-full",
+        media: {
+          type: "video",
+          src: "REGISTRAZIONE TOUCH.mp4",
+          alt: "Radici interaction recording",
+        }
+      },
+      {
+        type: "caption",
+        content: "The system integrates AI-generated imagery from StreamDiffusion within a real-time pipeline in TouchDesigner, where custom procedural simulations control the growth of fractal and coral-like structures. A live input layer is introduced through Tagtool, enabling real-time drawing synchronized with performers. The setup allows continuous interaction between generative processes and stage action, maintaining a responsive and evolving visual system."
+      },
+      {
+        type: "media-full",
+        media: { 
+          type: "image",
+          src: "DSC09068.jpg",
+          alt: "Radici spatial still",
+        }
+        },
+        {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "DSCF2318.JPG",
+          alt: "Radici spatial still",
+        }
+      }
+      
+    ],
   }),
   createProject({
     folder: "08-Theremin900",
     slug: "theremin900",
     title: "Theremin900",
-    subtitle: "Gesture, electronics, and sonic experimentation",
-    category: "Experimental instrument",
+    subtitle: "Gesture-controlled audiovisual instrument",
+    category: "Interaction Design | Audiovisual | Creative Coding",
     year: "2024",
     role: "Interaction design, hardware experimentation, prototyping",
     summary:
       "An experimental instrument project exploring gesture, electronics, and performance.",
     description:
-      "Use this area for a short description of the instrument logic, technical approach, and the behaviour of the prototype in use.",
-    credits: [
-      "Project credits placeholder",
-      "Fabrication notes can be inserted here",
-    ],
+      "An interactive installation that translates hand movements into sound and visuals using Leap Motion. The system generates and modulates sine waves in real time, linking spatial gestures to frequency, amplitude, and visual output. The project explores the relationship between body, sound, and digital matter through a responsive audiovisual interface.",
     links: [],
     preview: {
       type: "video",
@@ -598,10 +648,9 @@ export const projects = [
     },
     media: [
       {
-        type: "image",
-        src: "DSCF1274.JPG",
+        type: "video",
+        src: "theremin.mp4",
         alt: "Theremin900 still",
-        caption: "Studio still.",
       },
       {
         type: "video",
@@ -615,20 +664,25 @@ export const projects = [
         alt: "Theremin900 supporting clip",
         caption: "Supporting clip.",
       },
+      {
+        type:"video",
+        src:"theremin900.mov",
+        caption:"Horizontal and vertical hand movements are translated into amplitude and frequency modulation, while the waveform is visualized in real time through procedural geometry whose scale and position reflect the incoming data. A pinch gesture introduces a second oscillator, layering two sine waves and simultaneously modifying the visual output."
+      }
     ],
   }),
   createProject({
     folder: "09-Admirari_Silva",
     slug: "admirari-silva",
     title: "Admirari Silva",
-    subtitle: "Atmosphere, pacing, and exhibition staging",
-    category: "Exhibition experience",
+    subtitle: "Immersive soundscape in a natural environment",
+    category: "Installation | Sound Art | Interaction design",
     year: "2024",
     role: "Experience design, curation support, visual direction",
     summary:
-      "An exhibition-focused project centered on atmosphere, staging, and visual pacing.",
+      "Immersive soundscape in a natural environment",
     description:
-      "This placeholder is intended for the final exhibition statement and the description of your role in shaping the visitor experience.",
+      "An environmental installation set in the forest of Scardavilla, combining spatial audio and projection mapping. Visitors navigate the space through sound, interacting with an evolving sonic system that responds to movement.The project creates a layered dialogue between landscape, history, and digital media, culminating in a collective performative experience.",
     credits: [
       "Project credits placeholder",
       "Curatorial or institutional partners can be listed here",
@@ -639,25 +693,38 @@ export const projects = [
       src: "preview.mp4",
       alt: "Admirari Silva preview video",
     },
-    media: [
+    blocks: [
       {
-        type: "image",
-        src: "DSC05720.jpg",
-        alt: "Admirari Silva still",
-        caption: "Exhibition context.",
+        type: "media-full",
+        media: {
+          type: "html",
+          content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1083109260?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Admirari Silva\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
+        }
       },
       {
-        type: "video",
-        src: "admirari silva intro.mp4",
-        alt: "Admirari Silva video",
-        caption: "Moving image excerpt.",
+        type:"caption",
+        content:"The installation combines spatial audio with projection mapping to create an immersive environment. Visitors navigate the space through sound, interacting with an evolving sonic system that responds to movement. The project creates a layered dialogue between landscape, history, and digital media, culminating in a collective performative experience."
       },
       {
-        type: "image",
-        src: "DSC05731.jpg",
-        alt: "Admirari Silva detail",
-        caption: "Documentation detail.",
+        type: "two-column",
+        items: [
+          {
+            type: "video",
+            src: "EXATR1.mp4",
+          },
+          {
+            type: "video",
+            src:"EXATR2.mp4",
+            alt: "Admirari Silva documentation image",
+          }
+        ]
+      
       },
+      {
+        type: "caption",
+        content: "The exhibit Admirari Silva was presented alongside other projects from the course as part of the exhibition Geografie Rizomatiche e Liminali at EXATR. The exhibition explored how design can reactivate abandoned spaces in the Romagna region, using site-specific interventions to reinterpret their spatial and cultural potential."
+      }
+
     ],
   }),
   createProject({
@@ -671,36 +738,61 @@ export const projects = [
     summary:
       "A project investigating displacement through posters, moving image, and exhibition graphics.",
     description:
-      "Use this project page for the final concept text and to describe how the visual outputs move across print, motion, and installation.",
-    credits: [
-      "Project credits placeholder",
-      "Production or print partners can be listed here",
-    ],
+      "A project exploring the relationship between natural environments and digital manipulation. Starting from on-site photographic surveys, images are processed through UV mapping and displacement techniques in TouchDesigner.The work reflects on how digital systems reinterpret physical landscapes, creating altered visual states that question perception and representation.",
+
     links: [],
     preview: {
       type: "video",
       src: "teaser_finale_2.mp4",
       alt: "Displace Input preview video",
     },
-    media: [
+blocks: [
       {
-        type: "image",
-        src: "manifesti2.jpg",
-        alt: "Displace Input posters",
-        caption: "Poster system.",
+        type: "media-full",
+        media: {
+          type: "html",
+          content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1010658953?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Displace input 01 - VISUAL IDENTITY\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
+        }
       },
       {
-        type: "video",
-        src: "teaser_finale_2.mp4",
-        alt: "Displace Input teaser",
-        caption: "Teaser clip.",
+        type:"caption",
+        content:"The installation combines spatial audio with projection mapping to create an immersive environment. Visitors navigate the space through sound, interacting with an evolving sonic system that responds to movement. The project creates a layered dialogue between landscape, history, and digital media, culminating in a collective performative experience."
       },
       {
-        type: "image",
-        src: "scanner_exhibit-01_3.gif",
-        alt: "Displace Input animated detail",
-        caption: "Animated exhibit detail.",
+        type: "two-column",
+        items: [
+          {
+            type: "image",
+            src: "manifesti2.jpg",
+          },
+          {
+            type: "image",
+            src:"manifesti3.jpg",
+            alt: "Admirari Silva documentation image",
+          }
+        ]
       },
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "BIG-Milano_Dropcity42-3-1.jpg",
+          alt: "Displace Input documentation image",
+        }
+      },
+      {
+        type:"media-full",
+        media: {
+          type: "image",
+          src: "BIG-Milano_Dropcity42-8.jpg",
+          alt: "Displace Input documentation image",
+        }
+      },
+      {
+        type: "caption",
+        content: "The project was part of the 2024 International Biennial of Graphics in Milan, presented within Dropcity’s expo D/STANZE – Forms, Relations, Approximations. The exhibition explored the concept of distance as a fluid, dynamic element, taking shape through multiple forms, relationships, and interpretations.",
+      }
+
     ],
   }),
 ];
