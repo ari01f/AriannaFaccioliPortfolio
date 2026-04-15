@@ -13,8 +13,8 @@
   --leading: 1.3;
   --ui-text: 18px;
   --summary-text: 18px;
-  --bio-text: 28px;
-  --ui-leading: 1.2;
+  --bio-text: 26px;
+  --ui-leading: 0.9;
   --ui-gap: var(--space-2);
   --card-gap: var(--space-4);
   --ui-clearance: var(--space-5);
@@ -97,7 +97,7 @@ ul {
   --text: 18px;
   --ui-text: 18px;
   --summary-text: 18px;
-  --bio-text: 29px;
+  --bio-text: 25px;
   --leading: 1.22;
   --ui-leading: 1.22;
   --ui-gap: 0.7rem;
@@ -112,7 +112,7 @@ ul {
   --text: 18px;
   --ui-text: 18px;
   --summary-text: 18px;
-  --bio-text: 29px;
+  --bio-text: 25px;
   --leading: 1.22;
   --ui-leading: 1.22;
   --ui-gap: 0.7rem;
@@ -176,7 +176,7 @@ h3 {
 .page-project .project-intro-meta,
 .page-project .project-intro-category,
 .page-project .project-intro-year {
-  font-size: 29px;
+  font-size: 25px;
 }
 
 .project-page-description,
@@ -185,7 +185,7 @@ h3 {
 .project-caption,
 .empty-state {
   font-family: var(--serif);
-  font-size: 29px;
+  font-size: 25px;
   font-weight: 400;
   line-height: inherit;
 }
@@ -587,7 +587,7 @@ h3 {
   display: block;
   max-width: 100%;
   font-family: var(--serif);
-  font-size: 29px;
+  font-size: 25px;
   line-height: inherit;
 }
 
@@ -907,7 +907,7 @@ h3 {
     --text: 16px;
     --ui-text: 16px;
     --summary-text: 16px;
-    --bio-text: 29px;
+    --bio-text: 25px;
   }
 
   .project-overlay {
@@ -917,7 +917,7 @@ h3 {
 
   .identity-bio {
     max-width: min(31ch, 100%);
-    line-height: 1.08;
+    line-height: 0.9;
   }
 
   .floating-labels {
