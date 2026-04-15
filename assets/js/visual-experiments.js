@@ -1,5 +1,6 @@
 import { siteData, visualExperiments } from "./projects-data.js";
 import { renderVisualExperimentsPage } from "./render.js";
+import { initMediaReveal } from "./media-reveal.js";
 
 const owner = document.querySelector("[data-site-owner]");
 const root = document.querySelector("[data-visual-experiments]");
@@ -14,6 +15,7 @@ if (!root) {
 }
 
 root.innerHTML = renderVisualExperimentsPage(visualExperiments);
+initMediaReveal(root);
 
 if (fixedBar) {
   root.append(fixedBar);

@@ -1,5 +1,6 @@
 import { getHomepageProjects, siteData, projects } from "./projects-data.js";
 import { renderFloatingLinks, renderProjectIndexItem } from "./render.js";
+import { initMediaReveal } from "./media-reveal.js";
 
 const owners = document.querySelectorAll("[data-site-owner]");
 const bio = document.querySelector("[data-site-bio]");
@@ -25,6 +26,7 @@ if (topLinks) {
 
 if (projectIndex) {
   projectIndex.innerHTML = getHomepageProjects().map(renderProjectIndexItem).join("");
+  initMediaReveal(projectIndex);
 }
 
 const activeProjectLabel = document.querySelector("[data-active-project]");
