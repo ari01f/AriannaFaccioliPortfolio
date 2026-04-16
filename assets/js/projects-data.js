@@ -1,9 +1,11 @@
 export const siteData = {
   owner: "Arianna Faccioli",
   label: "Interaction designer and creative technologist",
-  bio: ` Arianna Faccioli (IT) is a creative technologist and multidisciplinary designer working across digital design, creative coding, and data visualization — examining how generative systems construct identities and narratives, mostly in Bologna, and often elsewhere.`,
+  bio: ` Arianna Faccioli is a multidisciplinary designer based in Bologna. She works across digital design, creative coding, and data visualization, focusing on how generative systems construct imaginaries, identities, and narratives.
+She holds a degree in Industrial Design from the University of Bologna and a Master’s in Interaction and Experience Design from the University of the Republic of San Marino. Her practice combines technical experimentation with a critical approach, addressing the cultural and political dimensions of data-driven systems.
+Her work explores how data, space, and sensory experience can be articulated into narrative-driven interactions. Through projects spanning exhibit design, sound design, creative coding, and web-based visual systems, she develops ways to translate complex processes into accessible and engaging visual and spatial experiences.`,
   links: [
-    { label: "Email", href: "mailto:hello@ariannafaccioli.com" },
+    { label: "Email", href: "mailto:arianna.facciolif01@gmail.com" },
     { label: "Instagram", href: "https://www.instagram.com/" },
     { label: "LinkedIn", href: "https://www.linkedin.com/" },
   ],
@@ -642,9 +644,9 @@ export const projects = [
       "An interactive installation that translates hand movements into sound and visuals using Leap Motion. The system generates and modulates sine waves in real time, linking spatial gestures to frequency, amplitude, and visual output. The project explores the relationship between body, sound, and digital matter through a responsive audiovisual interface.",
     links: [],
     preview: {
-      type: "video",
+      type: "html",
       src: "theremin.mp4",
-      alt: "Theremin900 preview video",
+      content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1084000750?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"theremin 900\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
     },
     media: [
       {
@@ -800,28 +802,117 @@ blocks: [
 export const visualExperiments = [
   {
     slug: "experiment-01",
-    title: "Experiment 01",
-    src: "assets/visual-experiments/experiment-01.svg",
-    alt: "Black and white geometric visual experiment number one",
+    title: "Critical coding cookbook",
+    src: "Esperimenti/Critical_coding_cookbook.png",
+    alt: "Critical coding cookbook visual experiment",
   },
   {
     slug: "experiment-02",
-    title: "Experiment 02",
-    src: "assets/visual-experiments/experiment-02.svg",
-    alt: "Black and white geometric visual experiment number two",
+    title: "Morphing landscapes",
+    src: "Esperimenti/AI_morphing.gif",
+    alt: "Morphing landscapes visual experiment",
+    href:"https://d2w9rnfcy7mm78.cloudfront.net/1972759/original_c8e03c976884489bc98ee1854f33f782.gif?1522428860?bc=1"
   },
   {
     slug: "experiment-03",
-    title: "Experiment 03",
-    src: "assets/visual-experiments/experiment-03.svg",
-    alt: "Black and white geometric visual experiment number three",
+    title: "Composite Process",
+    src: "Esperimenti/composite_process-2.gif",
+    alt: "Composite Process visual experiment",
   },
   {
     slug: "experiment-04",
-    title: "Experiment 04",
-    src: "assets/visual-experiments/experiment-04.svg",
-    alt: "Black and white geometric visual experiment number four",
+    title: "Cool Spreadsheet- Wilderness Land",
+    src: "Esperimenti/Wild.png",
+    alt: "Wild visual experiment",
+    href:"https://wilderness.land"
   },
+  {
+    slug: "experiment-05",
+    title: "https://coffee.youngjo.com",
+    src: "Esperimenti/coffe.png",
+    alt: "Coffee sequences visual experiment",
+    href:"https://coffee.youngjo.com"
+  },
+  {
+    slug: "experiment-06",
+    title: "Archival counciousness",
+    src: "Esperimenti/Archival.png",
+    alt: "Archival counciousness",
+    href: "https://www.archivalconsciousness.org/?fbclid=PAZXh0bgNhZW0CMTEAAacSmGmKUl2f9ZgafqhBNLs3Kk_E2bP3qnDb5DPf5KkPQbOufwhH6DJYAdBL0A_aem_t7Nm59EhwEiwAJqQYRl_DQ"
+  },
+  {
+    slug: "experiment-07",
+    title: "Pygmalionproject",
+    src: "Esperimenti/pygmalionproject.png",
+    alt: "pygmalionproject",
+    href:"https://pygmalionproject.online/C15"
+  },
+  {
+    slug:"direct technique",
+    title:"Direct visualization techniques ",
+    src:"Esperimenti/directvix.png",
+    alt:"Direct technique visual experiment",
+    href:"https://ahnp.ub.uni-heidelberg.de/journals/dah/article/view/33529/27217"
+  },
+  {
+    slug:"experiment-08",
+    title:"Moss",
+    src:"Esperimenti/moss.png",
+  },
+  {
+    slug:"experiment-09",
+    title:"Microgreens",
+    src:"Esperimenti/microgreens.png",
+  },
+  {
+    slug:"experiment-10",
+    title:"We Built This City On",
+    src:"Esperimenti/We Built This City On.png",
+    href:"https://everynoise.com/cities.html"
+  },
+  {
+    slug:"python-visualization",
+    title:"Python visualization",
+    src:"Esperimenti/output2.gif",
+    alt:"Python visualization experiment",
+    href:"https://example.com/python-visualization"
+  },
+  {
+    slug:"experiment-12",
+    title:"Touchdesigner experiments",
+    src:"Esperimenti/output.gif",
+    alt:"Touchdesigner experiments visual experiment",
+    href:"https://pudding.cool/"
+  },
+  {
+    slug:"experiment-13",
+    title:"Crows sunbathing",
+    src:"Esperimenti/crows.png",
+    alt:"Data visualization experiment",
+    href:"https://www.inaturalist.org/observations?place_id=any&subview=map&taxon_id=any"
+  },
+  {
+    slug:"experiment-14",
+    title:"AI & conflicts",
+    src:"Esperimenti/Ai.png",
+    alt:"AI & conflicts visual book cover",
+    href:"https://www.krisispublishing.com/prodotto/ai-conflicts-02/"
+  },
+  {
+    slug:"experiment-15",
+    title:"CYBERFEMINISM INDEX",
+    src:"Esperimenti/Mindy-Seu-Cyberfeminism-Index-01_2000x.webp",
+    alt:"AI & conflicts visual book cover",
+    href:"https://cyberfeminismindex.com/"
+  },
+  {
+    slug:"experiment-16",
+    title:"Critical field guide to AI",
+    src:"Esperimenti/knowing_machines.png",
+    alt:"Critical field guide to AI",
+    href:"https://knowingmachines.org/critical-field-guide"
+
+  }
 ];
 
 export function getProjectBySlug(slug) {

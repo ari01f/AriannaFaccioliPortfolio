@@ -1,10 +1,92 @@
 import { siteData, visualExperiments } from "./projects-data.js";
-import { renderVisualExperimentsPage } from "./render.js";
+import { renderDraggableVisualExperiments } from "./render.js";
+import { initDraggableItems } from "./drag.js";
 import { initMediaReveal } from "./media-reveal.js";
+
+function waitForMediaDimensions(media) {
+  return new Promise((resolve) => {
+    if (media instanceof HTMLImageElement) {
+      if (media.complete && media.naturalWidth > 0 && media.naturalHeight > 0) {
+        resolve({ width: media.naturalWidth, height: media.naturalHeight });
+        return;
+      }
+
+      media.addEventListener(
+        "load",
+        () => {
+          resolve({ width: media.naturalWidth, height: media.naturalHeight });
+        },
+        { once: true },
+      );
+      media.addEventListener(
+        "error",
+        () => {
+          resolve({ width: 1, height: 1 });
+        },
+        { once: true },
+      );
+      return;
+    }
+
+    if (media instanceof HTMLVideoElement) {
+      if (media.videoWidth > 0 && media.videoHeight > 0) {
+        resolve({ width: media.videoWidth, height: media.videoHeight });
+        return;
+      }
+
+      media.addEventListener(
+        "loadedmetadata",
+        () => {
+          resolve({ width: media.videoWidth || 1, height: media.videoHeight || 1 });
+        },
+        { once: true },
+      );
+      media.addEventListener(
+        "error",
+        () => {
+          resolve({ width: 1, height: 1 });
+        },
+        { once: true },
+      );
+      return;
+    }
+
+    resolve({ width: 1, height: 1 });
+  });
+}
+
+async function prepareDraggableMedia(rootElement) {
+  const items = [...rootElement.querySelectorAll(".draggable-item")];
+
+  await Promise.all(
+    items.map(async (item) => {
+      const media = item.querySelector(".single-project-media");
+      const mediaShell = item.querySelector(".draggable-item-media");
+
+      if (!media || !mediaShell) {
+        return;
+      }
+
+      const { width, height } = await waitForMediaDimensions(media);
+      const safeWidth = Math.max(width, 1);
+      const safeHeight = Math.max(height, 1);
+      const ratio = safeWidth / safeHeight;
+
+      mediaShell.style.setProperty("--experiment-media-aspect", `${safeWidth} / ${safeHeight}`);
+
+      if (ratio < 0.85) {
+        item.style.setProperty("--experiment-item-width", "clamp(11rem, 16vw, 14rem)");
+      } else if (ratio > 1.2) {
+        item.style.setProperty("--experiment-item-width", "clamp(16rem, 26vw, 24rem)");
+      } else {
+        item.style.setProperty("--experiment-item-width", "clamp(14rem, 21vw, 18rem)");
+      }
+    }),
+  );
+}
 
 const owner = document.querySelector("[data-site-owner]");
 const root = document.querySelector("[data-visual-experiments]");
-const fixedBar = document.querySelector(".project-fixed-bar");
 
 if (owner) {
   owner.textContent = siteData.owner;
@@ -14,9 +96,14 @@ if (!root) {
   throw new Error("Visual experiments root not found.");
 }
 
-root.innerHTML = renderVisualExperimentsPage(visualExperiments);
+// Render draggable visual experiments page
+root.innerHTML = renderDraggableVisualExperiments(visualExperiments);
 initMediaReveal(root);
 
-if (fixedBar) {
-  root.append(fixedBar);
+// Initialize dragging functionality
+const canvas = root.querySelector(".visual-experiments-canvas");
+const itemsContainer = root.querySelector(".draggable-items-container");
+if (canvas && itemsContainer) {
+  await prepareDraggableMedia(root);
+  initDraggableItems(itemsContainer);
 }

@@ -10,9 +10,33 @@ function resolveAssetPath(path) {
   return new URL(`../../${path}`, import.meta.url).href;
 }
 
+function normalizeHtmlMedia(content) {
+  if (!content) {
+    return "";
+  }
+
+  return content.replace(/<iframe\b([^>]*)>/gi, (match, attrs) => {
+    if (/\bclass\s*=\s*"/i.test(attrs)) {
+      return `<iframe${attrs.replace(/\bclass\s*=\s*"([^"]*)"/i, (classMatch, classNames) => {
+        if (classNames.split(/\s+/).includes("single-project-media")) {
+          return classMatch;
+        }
+        return `class="${classNames} single-project-media"`;
+      })}>`;
+    }
+
+    return `<iframe class="single-project-media"${attrs}>`;
+  });
+}
+
 export function createMedia(media, options = {}) {
   const { controls = true, autoplay = false, loop = false, muted = false } =
     options;
+
+  if (media.type === "html") {
+    return normalizeHtmlMedia(media.content);
+  }
+
   const source = resolveAssetPath(media.src);
   const poster = media.poster ? ` poster="${resolveAssetPath(media.poster)}"` : "";
 
@@ -194,7 +218,7 @@ export function renderTwoColumnBlock(items) {
       return `
         <div class="column column--media">
           <div class="media-container media-container--column">
-            ${item.content || ""}
+            ${normalizeHtmlMedia(item.content)}
           </div>
         </div>
       `;
@@ -241,7 +265,7 @@ export function renderHtmlBlock(content) {
 
   return `
     <div class="layout-block layout-block--html">
-      ${content}
+      ${normalizeHtmlMedia(content)}
     </div>
   `;
 }
@@ -312,5 +336,54 @@ export function renderVisualExperimentsPage(experiments) {
         ${rows}
       </section>
     </article>
+  `;
+}
+
+/**
+ * Render draggable visual experiments page
+ * Each item includes media and description, positioned absolutely for free dragging
+ */
+export function renderDraggableVisualExperiments(experiments) {
+  function renderDraggableMedia(item) {
+    const source = resolveAssetPath(item.src);
+
+    if (item.type === "video") {
+      const poster = item.poster ? ` poster="${resolveAssetPath(item.poster)}"` : "";
+
+      return `<video class="single-project-media" src="${source}"${poster} preload="metadata" playsinline muted loop autoplay></video>`;
+    }
+
+    return `<img class="single-project-media" src="${source}" alt="${item.alt}" loading="lazy" draggable="false" />`;
+  }
+
+  const items = experiments
+    .map(
+      (item) => `
+    <div class="draggable-item" data-experiment-id="${item.slug}" data-x="0" data-y="0" data-positioned="false">
+      ${item.href ? `<a class="draggable-item-link" href="${item.href}" target="_blank" rel="noreferrer">` : '<div class="draggable-item-link">'}
+        <div class="draggable-item-media">
+          ${renderDraggableMedia(item)}
+        </div>
+        <p class="draggable-item-description">${item.title}</p>
+      ${item.href ? "</a>" : "</div>"}
+    </div>
+  `,
+    )
+    .join("");
+
+  return `
+    <div class="visual-experiments-canvas">
+      <section class="visual-experiments-intro-section">
+        <div class="visual-experiments-intro-main">
+          <h1>Visual Experiments</h1>
+        </div>
+        <div class="visual-experiments-intro-side">
+          <p class="project-page-description visual-experiments-intro-description">A separate set of image-based experiments. These entries are not part of the selected works archive. Drag items to explore the canvas freely.</p>
+        </div>
+      </section>
+      <div class="draggable-items-container">
+        ${items}
+      </div>
+    </div>
   `;
 }
