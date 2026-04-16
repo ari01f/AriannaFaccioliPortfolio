@@ -116,7 +116,6 @@ ul {
 
 .page-project {
   overflow: auto;
-  isolation: isolate;
   --pad: clamp(1rem, 3vw, 3rem);
   --text: 20px;
   --ui-text: 20px;
@@ -131,7 +130,6 @@ ul {
 .site-grid {
   position: relative;
   width: 100%;
-  isolation: isolate;
 }
 
 h1,
@@ -215,7 +213,7 @@ h3 {
   column-gap: var(--home-column-gap);
   min-height: 100vh;
   padding: var(--pad);
-  isolation: auto;
+  padding-top: calc(var(--pad) + var(--ui-clearance));
 }
 
 .page-project .site-grid {
@@ -225,7 +223,6 @@ h3 {
   column-gap: var(--home-column-gap);
   min-height: 100vh;
   padding: var(--pad);
-  isolation: auto;
 }
 
 .page-home .identity-column {
@@ -322,7 +319,6 @@ h3 {
 
 .floating-media-strip {
   display: flex;
-  justify-content: space-between;
   align-items: start;
   width: 100%;
   min-width: 0;
@@ -333,6 +329,7 @@ h3 {
 }
 
 .floating-label--active-project {
+  flex: 1 1 0;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -341,10 +338,13 @@ h3 {
 }
 
 .floating-label--works {
+  flex: 0 0 auto;
   text-align: center;
 }
 
 .floating-label--experiments {
+  flex: 1 1 0;
+  min-width: 0;
   text-align: right;
 }
 
@@ -898,10 +898,30 @@ h3 {
     --gap: 0.5rem;
     --card-gap: 1.35rem;
     --media-min-height: 14rem;
+    --text: 16px;
+    --ui-text: 16px;
+    --summary-text: 16px;
+    --bio-text: 16px;
   }
 
   .page-home {
     --pad: 0.5rem;
+    --text: 16px;
+    --ui-text: 16px;
+    --summary-text: 16px;
+    --bio-text: 16px;
+  }
+
+  .page-project {
+    --text: 16px;
+    --ui-text: 16px;
+    --summary-text: 16px;
+    --bio-text: 16px;
+  }
+
+  .floating-label,
+  .floating-bio-strip a {
+    font-size: 16px;
   }
 
   .project-overlay {

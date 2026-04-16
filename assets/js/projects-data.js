@@ -135,9 +135,9 @@ export const projects = [
 
     links: [],
     preview: {
-      type: "html",
+      type: "video",
       src: "filmati/preview.mov",
-      content: "<div style=\"padding:75% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1183790494?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"preview\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
+      alt: "Prompted Identities preview",
     },
     media: [
       {
@@ -214,9 +214,9 @@ export const projects = [
       "An interactive visualization platform based on iNaturalist observations from the Parco Regionale del Fiume Sile. The project reorganizes biodiversity data into spatial categories that merge natural and human-made environments, highlighting coexistence, adaptation, and ecological imbalance.The project is publicly available on <a href=\"https://ari01f.github.io/Interspecie_definitivo/intro.html\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">GitHub</a>.",
     links: [],
     preview: {
-      type: "html",
+      type: "video",
       src: "preview.mov",
-      content: "<div style=\"padding:57.53% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1183790980?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"preview\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
+      alt: "Interspecie preview",
     },
     media: [
       {
@@ -289,9 +289,9 @@ export const projects = [
       "Hemispherical Stacks is a scenario fiction project developed in collaboration with <a href=\"https://gigadesignstudio.com/projects/antikythera-hemispherical-stacks\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">Giga</a> during my internship experience, for <a href=\"https://journal.antikythera.org\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">Antikythera</a>, an editorial initiative by MIT Press. The project reworks theoretical and research-based content not in the form of articles, but through explorable spaces: scenographic environments that translate the dynamics of contemporary computation and their geopolitical implications into an interactive and visual form.",
     links: [],
     preview: {
-      type: "html",
+      type: "video",
       src: "09357ad327523e37963714fd834273ad.mov",
-      content: "<div style=\"padding:75% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1183793155?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"09357ad327523e37963714fd834273ad\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
+      alt: "Hemispherical Stacks preview",
     },
     media: [
       {
@@ -644,9 +644,9 @@ export const projects = [
       "An interactive installation that translates hand movements into sound and visuals using Leap Motion. The system generates and modulates sine waves in real time, linking spatial gestures to frequency, amplitude, and visual output. The project explores the relationship between body, sound, and digital matter through a responsive audiovisual interface.",
     links: [],
     preview: {
-      type: "html",
-      src: "theremin.mp4",
-      content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1084000750?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"theremin 900\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
+      type: "video",
+      src: "theremin900.mp4",
+      alt: "Theremin900 preview",
     },
     media: [
       {
@@ -744,9 +744,9 @@ export const projects = [
 
     links: [],
     preview: {
-      type: "html",
+      type: "video",
       src: "teaser_finale_2.mp4",
-      content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1010658953?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Displace input 01 - VISUAL IDENTITY\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
+      alt: "Displace Input preview",
     },
 blocks: [
       {
