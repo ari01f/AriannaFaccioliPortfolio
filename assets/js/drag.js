@@ -48,7 +48,9 @@ function getInitialPositions(items, containerWidth, containerHeight, topInset = 
   const placedRects = [];
   const maxAttempts = 80;
   const fallbackCols = Math.max(1, Math.ceil(Math.sqrt(items.length)));
-  const usableWidth = Math.max(containerWidth - OUTER_GAP * 2, 0);
+  const viewportWidth = window.innerWidth;
+  const effectiveWidth = Math.min(containerWidth, viewportWidth);
+  const usableWidth = Math.max(effectiveWidth - OUTER_GAP * 2, 0);
   const usableHeight = Math.max(containerHeight - topInset - OUTER_GAP, 320);
   const anchors = getAnchorSlots(topInset, usableWidth, usableHeight);
 
@@ -66,7 +68,7 @@ function getInitialPositions(items, containerWidth, containerHeight, topInset = 
   items.forEach((item, index) => {
     const itemWidth = Math.max(item.offsetWidth, 180);
     const itemHeight = Math.max(item.offsetHeight, 180);
-    const maxX = Math.max(containerWidth - itemWidth - OUTER_GAP, OUTER_GAP);
+    const maxX = Math.max(effectiveWidth - itemWidth - OUTER_GAP, OUTER_GAP);
     const minY = topInset;
     const maxY = Math.max(containerHeight - itemHeight - OUTER_GAP, minY);
     let position = null;
@@ -112,7 +114,7 @@ function getInitialPositions(items, containerWidth, containerHeight, topInset = 
     if (!position) {
       const col = index % fallbackCols;
       const row = Math.floor(index / fallbackCols);
-      const fallbackX = OUTER_GAP + col * ((containerWidth - OUTER_GAP * 2) / fallbackCols);
+      const fallbackX = OUTER_GAP + col * ((effectiveWidth - OUTER_GAP * 2) / fallbackCols);
       const fallbackY = minY + row * (itemHeight + ITEM_GAP);
       const candidate = {
         left: fallbackX,
@@ -149,10 +151,16 @@ export function initDraggableItems(container) {
     ? Math.max(labelsRect.bottom - containerRect.top, 0) + 24
     : 24;
 
+  // On mobile, constrain spawn area to the visible viewport
+  const isMobile = window.innerWidth <= 1040;
+  const visibleHeight = isMobile
+    ? Math.max(window.innerHeight - Math.max(containerRect.top, 0), 300)
+    : containerHeight;
+
   const initialPositions = getInitialPositions(
     items,
     containerWidth,
-    containerHeight,
+    visibleHeight,
     topInset,
   );
   const dragThreshold = 6;

@@ -12,6 +12,11 @@ const scrollRoot =
     ? rightContent
     : null;
 
+const MOBILE_BREAKPOINT = 1040;
+function getOwnerLabel() {
+  return window.innerWidth <= MOBILE_BREAKPOINT ? "AF" : siteData.owner;
+}
+
 owners.forEach((el) => { el.textContent = siteData.owner; });
 
 if (topLinks) {
@@ -33,7 +38,7 @@ const mediaBlocks = [...document.querySelectorAll("[data-home-media-block]")];
 const isHomepage = mediaBlocks.length > 0;
 
 if (activeProjectLabel) {
-  activeProjectLabel.textContent = siteData.owner;
+  activeProjectLabel.textContent = getOwnerLabel();
 }
 
 const projectTitleBySlug = new Map(
@@ -76,7 +81,7 @@ if (activeProjectLabel && isHomepage) {
 
     activeBlock = nextBlock;
     if (hasScrolled) {
-      activeProjectLabel.textContent = getProjectTitle(nextBlock) || siteData.owner;
+      activeProjectLabel.textContent = getProjectTitle(nextBlock) || getOwnerLabel();
     }
   }
 

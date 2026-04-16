@@ -74,12 +74,24 @@ async function prepareDraggableMedia(rootElement) {
 
       mediaShell.style.setProperty("--experiment-media-aspect", `${safeWidth} / ${safeHeight}`);
 
-      if (ratio < 0.85) {
-        item.style.setProperty("--experiment-item-width", "clamp(11rem, 16vw, 14rem)");
-      } else if (ratio > 1.2) {
-        item.style.setProperty("--experiment-item-width", "clamp(16rem, 26vw, 24rem)");
+      const isMobile = window.innerWidth <= 720;
+
+      if (isMobile) {
+        if (ratio < 0.85) {
+          item.style.setProperty("--experiment-item-width", "clamp(8rem, 35vw, 10rem)");
+        } else if (ratio > 1.2) {
+          item.style.setProperty("--experiment-item-width", "clamp(10rem, 45vw, 14rem)");
+        } else {
+          item.style.setProperty("--experiment-item-width", "clamp(9rem, 40vw, 12rem)");
+        }
       } else {
-        item.style.setProperty("--experiment-item-width", "clamp(14rem, 21vw, 18rem)");
+        if (ratio < 0.85) {
+          item.style.setProperty("--experiment-item-width", "clamp(11rem, 16vw, 14rem)");
+        } else if (ratio > 1.2) {
+          item.style.setProperty("--experiment-item-width", "clamp(16rem, 26vw, 24rem)");
+        } else {
+          item.style.setProperty("--experiment-item-width", "clamp(14rem, 21vw, 18rem)");
+        }
       }
     }),
   );
@@ -89,8 +101,13 @@ const root = document.querySelector("[data-visual-experiments]");
 const topLinks = document.querySelector("[data-site-top-links]");
 const activeProjectLabel = document.querySelector("[data-active-project]");
 
+const MOBILE_BREAKPOINT = 1040;
+function getOwnerLabel() {
+  return window.innerWidth <= MOBILE_BREAKPOINT ? "AF" : siteData.owner;
+}
+
 if (activeProjectLabel) {
-  activeProjectLabel.textContent = siteData.owner;
+  activeProjectLabel.textContent = getOwnerLabel();
 }
 
 if (topLinks) {

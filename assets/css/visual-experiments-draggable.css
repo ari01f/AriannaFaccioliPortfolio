@@ -142,6 +142,11 @@
 }
 
 @media (max-width: 720px) {
+  .page-visual-experiments {
+    --pad: 0.5rem;
+    --experiment-card-width: clamp(9rem, 40vw, 12rem);
+  }
+
   .visual-experiments-canvas {
     padding: clamp(1rem, 3vw, 1.5rem);
   }
@@ -151,8 +156,8 @@
   }
 
   .visual-experiments-intro-description {
-    max-width: min(31ch, 100%);
-    line-height: 0.9;
+    max-width: 100%;
+    line-height: 1.25;
   }
 
   .draggable-items-container {
@@ -160,7 +165,7 @@
   }
 
   .draggable-item-description {
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 0.5rem;
   }
 }

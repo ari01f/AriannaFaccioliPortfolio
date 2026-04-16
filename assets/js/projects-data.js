@@ -20,6 +20,7 @@ function withFolder(folder, media) {
     ...media,
     ...(media.src ? { src: `${folder}/${media.src}` } : {}),
     ...(media.poster ? { poster: `${folder}/${media.poster}` } : {}),
+    ...(media.mobileSrc ? { mobileSrc: `${folder}/${media.mobileSrc}` } : {}),
   };
 }
 
@@ -184,11 +185,13 @@ export const projects = [
           {
             type: "video",
             src: "workinprogress/ANTEPRIMA.mp4",
+            mobileSrc: "workinprogress/ANTEPRIMA_mobile.mov",
             alt: "Prompted Identities detailed exploration"
           },
           {
             type: "video",
             src: "workinprogress/screenrecord.mp4",
+            mobileSrc: "workinprogress/SDXL_mobile.mov",
             alt: "Prompted Identities interaction demo"
           },
         

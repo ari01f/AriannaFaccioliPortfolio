@@ -8,12 +8,17 @@ const topLinks = document.querySelector("[data-site-top-links]");
 const activeProjectLabel = document.querySelector("[data-active-project]");
 const project = getProjectBySlug(document.body.dataset.projectSlug);
 
+const MOBILE_BREAKPOINT = 1040;
+function getOwnerLabel() {
+  return window.innerWidth <= MOBILE_BREAKPOINT ? "AF" : siteData.owner;
+}
+
 if (owner) {
   owner.textContent = siteData.owner;
 }
 
 if (activeProjectLabel) {
-  activeProjectLabel.textContent = siteData.owner;
+  activeProjectLabel.textContent = getOwnerLabel();
 }
 
 if (topLinks) {

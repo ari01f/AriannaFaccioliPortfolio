@@ -979,10 +979,23 @@ h3 {
   }
 
   .page-project {
+    --pad: 0.5rem;
     --text: 16px;
     --ui-text: 16px;
     --summary-text: 16px;
     --bio-text: 16px;
+  }
+
+  .page-project .project-page-title,
+  .page-project .project-page-subtitle,
+  .page-project .project-intro-meta,
+  .page-project .project-intro-category,
+  .page-project .project-intro-year {
+    font-size: 16px;
+  }
+
+  .page-visual-experiments {
+    --pad: 0.5rem;
   }
 
   .floating-label,

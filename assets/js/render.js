@@ -37,7 +37,8 @@ export function createMedia(media, options = {}) {
     return normalizeHtmlMedia(media.content);
   }
 
-  const source = resolveAssetPath(media.src);
+  const isMobile = window.innerWidth <= 1040;
+  const source = resolveAssetPath(isMobile && media.mobileSrc ? media.mobileSrc : media.src);
   const poster = media.poster ? ` poster="${resolveAssetPath(media.poster)}"` : "";
 
   if (media.type === "video") {
