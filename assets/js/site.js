@@ -12,16 +12,14 @@ const scrollRoot =
     ? rightContent
     : null;
 
-owners.forEach((owner) => {
-  owner.textContent = siteData.owner;
-});
-
-if (bio) {
-  bio.textContent = siteData.bio;
-}
+owners.forEach((el) => { el.textContent = siteData.owner; });
 
 if (topLinks) {
   topLinks.innerHTML = renderFloatingLinks(siteData.links);
+}
+
+if (bio) {
+  bio.innerHTML = siteData.bio;
 }
 
 if (projectIndex) {
@@ -30,12 +28,20 @@ if (projectIndex) {
 }
 
 const activeProjectLabel = document.querySelector("[data-active-project]");
+
 const mediaBlocks = [...document.querySelectorAll("[data-home-media-block]")];
+const isHomepage = mediaBlocks.length > 0;
+
+if (activeProjectLabel) {
+  activeProjectLabel.textContent = siteData.owner;
+}
+
 const projectTitleBySlug = new Map(
   projects.map(({ slug, title }) => [slug, title]),
 );
 
-if (activeProjectLabel && mediaBlocks.length > 0) {
+if (activeProjectLabel && isHomepage) {
+  let hasScrolled = false;
   const visibleBlocks = new Set();
   const thresholds = Array.from({ length: 101 }, (_, index) => index / 100);
   let activeBlock = null;
@@ -69,7 +75,9 @@ if (activeProjectLabel && mediaBlocks.length > 0) {
     }
 
     activeBlock = nextBlock;
-    activeProjectLabel.textContent = getProjectTitle(nextBlock);
+    if (hasScrolled) {
+      activeProjectLabel.textContent = getProjectTitle(nextBlock) || siteData.owner;
+    }
   }
 
   function resolveActiveBlock() {
@@ -139,10 +147,11 @@ if (activeProjectLabel && mediaBlocks.length > 0) {
 
   mediaBlocks.forEach((block) => observer.observe(block));
 
-  (scrollRoot ?? window).addEventListener("scroll", queueActiveBlockUpdate, {
+  (scrollRoot ?? window).addEventListener("scroll", () => {
+    hasScrolled = true;
+    queueActiveBlockUpdate();
+  }, {
     passive: true,
   });
   window.addEventListener("resize", queueActiveBlockUpdate);
-
-  queueActiveBlockUpdate();
 }

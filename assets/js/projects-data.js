@@ -1,8 +1,8 @@
 export const siteData = {
   owner: "Arianna Faccioli",
   label: "Interaction designer and creative technologist",
-  bio: ` Arianna Faccioli is a multidisciplinary designer based in Bologna. She works across digital design, creative coding, and data visualization, focusing on how generative systems construct imaginaries, identities, and narratives.
-She holds a degree in Industrial Design from the University of Bologna and a Master’s in Interaction and Experience Design from the University of the Republic of San Marino. Her practice combines technical experimentation with a critical approach, addressing the cultural and political dimensions of data-driven systems.
+  bio: ` <u>Arianna Faccioli</u> is a multidisciplinary designer based in Bologna. She works across <u>digital design</u>, <u>creative coding</u>, and <u>data visualization</u>, focusing on how generative systems construct imaginaries, identities, and narratives.
+She holds a degree in Industrial Design from the University of Bologna and a Master’s in Interaction Design from the University of the Republic of San Marino.<br> Her practice combines technical experimentation with a critical approach, addressing the cultural and political dimensions of data-driven systems.
 Her work explores how data, space, and sensory experience can be articulated into narrative-driven interactions. Through projects spanning exhibit design, sound design, creative coding, and web-based visual systems, she develops ways to translate complex processes into accessible and engaging visual and spatial experiences.`,
   links: [
     { label: "Email", href: "mailto:arianna.facciolif01@gmail.com" },
@@ -135,9 +135,9 @@ export const projects = [
 
     links: [],
     preview: {
-      type: "video",
+      type: "html",
       src: "filmati/preview.mov",
-      alt: "Prompted Identities interface still",
+      content: "<div style=\"padding:75% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1183790494?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"preview\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
     },
     media: [
       {
@@ -214,9 +214,9 @@ export const projects = [
       "An interactive visualization platform based on iNaturalist observations from the Parco Regionale del Fiume Sile. The project reorganizes biodiversity data into spatial categories that merge natural and human-made environments, highlighting coexistence, adaptation, and ecological imbalance.The project is publicly available on <a href=\"https://ari01f.github.io/Interspecie_definitivo/intro.html\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">GitHub</a>.",
     links: [],
     preview: {
-      type: "video",
+      type: "html",
       src: "preview.mov",
-      alt: "Interspecie preview",
+      content: "<div style=\"padding:57.53% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1183790980?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"preview\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
     },
     media: [
       {
@@ -289,9 +289,9 @@ export const projects = [
       "Hemispherical Stacks is a scenario fiction project developed in collaboration with <a href=\"https://gigadesignstudio.com/projects/antikythera-hemispherical-stacks\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">Giga</a> during my internship experience, for <a href=\"https://journal.antikythera.org\" target=\"_blank\" rel=\"noreferrer\" class=\"clickable-link\">Antikythera</a>, an editorial initiative by MIT Press. The project reworks theoretical and research-based content not in the form of articles, but through explorable spaces: scenographic environments that translate the dynamics of contemporary computation and their geopolitical implications into an interactive and visual form.",
     links: [],
     preview: {
-      type: "video",
+      type: "html",
       src: "09357ad327523e37963714fd834273ad.mov",
-      alt: "Hemstacks preview image",
+      content: "<div style=\"padding:75% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1183793155?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"09357ad327523e37963714fd834273ad\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
     },
     media: [
       {
@@ -744,9 +744,9 @@ export const projects = [
 
     links: [],
     preview: {
-      type: "video",
+      type: "html",
       src: "teaser_finale_2.mp4",
-      alt: "Displace Input preview video",
+      content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1010658953?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Displace input 01 - VISUAL IDENTITY\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>",
     },
 blocks: [
       {

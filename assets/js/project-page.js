@@ -12,12 +12,12 @@ if (owner) {
   owner.textContent = siteData.owner;
 }
 
-if (topLinks) {
-  topLinks.innerHTML = renderFloatingLinks(siteData.links);
+if (activeProjectLabel) {
+  activeProjectLabel.textContent = siteData.owner;
 }
 
-if (activeProjectLabel && project) {
-  activeProjectLabel.textContent = project.title;
+if (topLinks) {
+  topLinks.innerHTML = renderFloatingLinks(siteData.links);
 }
 
 if (!pageRoot) {

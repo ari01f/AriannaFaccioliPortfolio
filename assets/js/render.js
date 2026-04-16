@@ -150,7 +150,7 @@ export function renderProjectIndexItem({
         </div>
         <div class="project-card-copy">
           <p class="project-card-caption">
-            <span class="project-card-title">${title}</span>${category ? `<span class="project-card-separator" aria-hidden="true">, </span><span class="project-chip">${category}</span>` : ""}${summary ? `<span class="project-card-separator" aria-hidden="true">, </span><span class="project-card-summary">${summary}</span>` : ""}
+            <span class="project-card-title">${title}</span>
           </p>
           ${year ? `<span class="project-chip project-chip--year">${year}</span>` : ""}
         </div>
@@ -374,9 +374,6 @@ export function renderDraggableVisualExperiments(experiments) {
   return `
     <div class="visual-experiments-canvas">
       <section class="visual-experiments-intro-section">
-        <div class="visual-experiments-intro-main">
-          <h1>Visual Experiments</h1>
-        </div>
         <div class="visual-experiments-intro-side">
           <p class="project-page-description visual-experiments-intro-description">A separate set of image-based experiments. These entries are not part of the selected works archive. Drag items to explore the canvas freely.</p>
         </div>

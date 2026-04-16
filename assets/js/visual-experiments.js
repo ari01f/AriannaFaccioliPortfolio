@@ -1,5 +1,5 @@
 import { siteData, visualExperiments } from "./projects-data.js";
-import { renderDraggableVisualExperiments } from "./render.js";
+import { renderDraggableVisualExperiments, renderFloatingLinks } from "./render.js";
 import { initDraggableItems } from "./drag.js";
 import { initMediaReveal } from "./media-reveal.js";
 
@@ -85,12 +85,19 @@ async function prepareDraggableMedia(rootElement) {
   );
 }
 
-const owner = document.querySelector("[data-site-owner]");
 const root = document.querySelector("[data-visual-experiments]");
+const topLinks = document.querySelector("[data-site-top-links]");
+const activeProjectLabel = document.querySelector("[data-active-project]");
 
-if (owner) {
-  owner.textContent = siteData.owner;
+if (activeProjectLabel) {
+  activeProjectLabel.textContent = siteData.owner;
 }
+
+if (topLinks) {
+  topLinks.innerHTML = renderFloatingLinks(siteData.links);
+}
+
+
 
 if (!root) {
   throw new Error("Visual experiments root not found.");
