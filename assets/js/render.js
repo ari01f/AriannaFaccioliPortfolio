@@ -150,7 +150,7 @@ export function renderProjectIndexItem({
         </div>
         <div class="project-card-copy">
           <p class="project-card-caption">
-            <span class="project-card-title">${title}</span>
+            <span class="project-card-title">${title}</span>${category ? `<span class="project-card-separator" aria-hidden="true">, </span><span class="project-chip">${category}</span>` : ""}${summary ? `<span class="project-card-separator" aria-hidden="true">, </span><span class="project-card-summary">${summary}</span>` : ""}
           </p>
           ${year ? `<span class="project-chip project-chip--year">${year}</span>` : ""}
         </div>
