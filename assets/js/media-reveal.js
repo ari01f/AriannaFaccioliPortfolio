@@ -34,6 +34,11 @@ function activateVideoSource(video) {
   if (video.dataset.src && !video.getAttribute("src")) {
     video.src = video.dataset.src;
     video.preload = "metadata";
+    // Aggiorna anche il source element per Safari
+    const sourceElement = video.querySelector("source");
+    if (sourceElement) {
+      sourceElement.src = video.dataset.src;
+    }
   }
 }
 

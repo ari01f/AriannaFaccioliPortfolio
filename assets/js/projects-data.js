@@ -358,13 +358,13 @@ export const projects = [
     links: [],
     preview: {
       type: "image",
-      src: "original_2796b02af6a170fcccbd5b1eb8845cd5.webp",
+      src: "original_2796b02af6a170fcccbd5b1eb8845cd5.jpg",
       alt: "Recall preview",
     },
     media: [
       {
         type: "image",
-        src: "original_64aec07566dace4ed04986edc499d27c.webp",
+        src: "original_64aec07566dace4ed04986edc499d27c.jpg",
         alt: "Recall still",
         caption: "The project combines generative graphics with sound analysis, creating a flexible system that adapts to both automated and performative contexts.",
       },
@@ -386,7 +386,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_2796b02af6a170fcccbd5b1eb8845cd5.webp",
+          src: "original_2796b02af6a170fcccbd5b1eb8845cd5.jpg",
           alt: "Recall still",
         }
       },
