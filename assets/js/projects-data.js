@@ -143,7 +143,7 @@ export const projects = [
     media: [
       {
         type: "video",
-        src: "filmati/similarity_x2.mov",
+        src: "filmati/similarity_x2.mp4",
         alt: "Prompted Identities interface still",
         caption: "Through direct visualization, users can explore large-scale outputs, compare models, and navigate clusters generated via dimensionality reduction. The system integrates face analysis, object detection, and similarity mapping into an interactive interface designed to expose how AI systems visually encode identity.",
       },
@@ -159,7 +159,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "video",
-          src: "filmati/About_x2.mov",
+          src: "filmati/About_x2.mp4",
           alt: "Prompted Identities interface still",
         }
       },
@@ -171,7 +171,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "video",
-          src: "filmati/similarity_x2.mov",
+          src: "filmati/similarity_x2.mp4",
           alt: "Prompted Identities interface still",
         }
       },
@@ -185,13 +185,13 @@ export const projects = [
           {
             type: "video",
             src: "workinprogress/ANTEPRIMA.mp4",
-            mobileSrc: "workinprogress/ANTEPRIMA_mobile.mov",
+            mobileSrc: "workinprogress/ANTEPRIMA_mobile.mp4",
             alt: "Prompted Identities detailed exploration"
           },
           {
             type: "video",
             src: "workinprogress/screenrecord.mp4",
-            mobileSrc: "workinprogress/SDXL_mobile.mov",
+            mobileSrc: "workinprogress/SDXL_mobile.mp4",
             alt: "Prompted Identities interaction demo"
           },
         
@@ -218,19 +218,19 @@ export const projects = [
     links: [],
     preview: {
       type: "video",
-      src: "preview.mov",
+      src: "preview.mp4",
       alt: "Interspecie preview",
     },
     media: [
       {
         type: "video",
-        src: "preview.mov",
+        src: "preview.mp4",
         alt: "Interspecie still",
         caption: "Data is parsed and reorganized into hybrid spatial categories combining ecological and anthropogenic elements. The system includes clustering logic based on taxonomy, origin, and conservation status, and a scroll-driven structure that progressively reveals environmental layers. Each observation is linked to geolocation and hierarchical biological metadata.",
       },
       {
         type:"video",
-        src:"scrolling_x2.mov",
+        src:"scrolling_x2.mp4",
         alt: "Interspecie scrolling demo",
         caption: "Users navigate a layered system that progressively reveals environmental strata and species distribution, integrating clustering and filtering to explore biological classifications, endangered species, and invasive dynamics."
       },
@@ -240,9 +240,9 @@ export const projects = [
       {
         type: "media-full",
         media: {
-          type: "video",
-          src: "preview.mov",
-          alt: "Prompted Identities interface still",
+          type: "html",
+          content: "<div style=\"padding:57.53% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1183790980?autoplay=1&amp;muted=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"preview\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
+          alt: "Interspecie preview",
         }
       },
       {
@@ -253,7 +253,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "video",
-          src: "scrolling_x2.mov",
+          src: "scrolling_x2.mp4",
           alt: "Prompted Identities interface still",
         }
       },
@@ -279,7 +279,7 @@ export const projects = [
     links: [],
     preview: {
       type: "video",
-      src: "09357ad327523e37963714fd834273ad.mov",
+      src: "09357ad327523e37963714fd834273ad.mp4",
       alt: "Hemispherical Stacks preview",
     },
     media: [
@@ -291,7 +291,7 @@ export const projects = [
       },
       {
         type: "image",
-        src: "original_2e464e39921b0251e652f37387e6cf07.png",
+        src: "original_2e464e39921b0251e652f37387e6cf07.webp",
         alt: "Hemstacks supporting still",
         caption: "Supporting still."
       },
@@ -300,8 +300,8 @@ export const projects = [
       {
         type: "media-full",
         media: {
-          type: "video",
-          src: "f165baedc12a49ef5537e64511e5e17e.mp4",
+          type: "html",
+          content: "<div style=\"padding:57.53% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1183790980?autoplay=1&amp;muted=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"preview\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
           alt: "Hemstacks interface view",
         }
       },
@@ -313,7 +313,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_f5859062c54863fcc941d448bdeedba6.png",
+          src: "original_f5859062c54863fcc941d448bdeedba6.webp",
           alt: "Hemstacks scenario visualization",
         }
       },
@@ -321,7 +321,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_a9be37a5a32592853a3ff2fb5c8a3153.png",
+          src: "original_a9be37a5a32592853a3ff2fb5c8a3153.webp",
           alt: "Hemstacks environment detail",
         }
       },
@@ -329,7 +329,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_042b11871e6036e6350a6bb6c718c36b.png",
+          src: "original_042b11871e6036e6350a6bb6c718c36b.webp",
           alt: "Hemstacks spatial composition",
         }
       },
@@ -358,25 +358,25 @@ export const projects = [
     links: [],
     preview: {
       type: "image",
-      src: "original_2796b02af6a170fcccbd5b1eb8845cd5.jpg",
+      src: "original_2796b02af6a170fcccbd5b1eb8845cd5.webp",
       alt: "Recall preview",
     },
     media: [
       {
         type: "image",
-        src: "original_64aec07566dace4ed04986edc499d27c.jpg",
+        src: "original_64aec07566dace4ed04986edc499d27c.webp",
         alt: "Recall still",
         caption: "The project combines generative graphics with sound analysis, creating a flexible system that adapts to both automated and performative contexts.",
       },
       {
         type: "image",
-        src: "original_a8645100df1f1e32dbd1da85be963689.gif",
+        src: "original_a8645100df1f1e32dbd1da85be963689.mp4",
         alt: "Recall motion fragment",
         caption: "Animated fragment.",
       },
       {
         type: "image",
-        src: "original_b5b32d15930e27d9560a554ddc228686.gif",
+        src: "original_b5b32d15930e27d9560a554ddc228686.mp4",
         alt: "Recall secondary still",
         caption: "Secondary still.",
       },
@@ -386,7 +386,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_2796b02af6a170fcccbd5b1eb8845cd5.jpg",
+          src: "original_2796b02af6a170fcccbd5b1eb8845cd5.webp",
           alt: "Recall still",
         }
       },
@@ -398,7 +398,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_a8645100df1f1e32dbd1da85be963689.gif",
+          src: "original_a8645100df1f1e32dbd1da85be963689.mp4",
           alt: "The visual engine is based on processed video backgrounds that are deliberately degraded through pixelation and synthesis techniques. This transformation reduces the source footage into abstract geometric structures, which are then recomposed and blended according to the rhythm and intensity of the audio input.",
         }
       },
@@ -410,19 +410,19 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_b5b32d15930e27d9560a554ddc228686.gif",
+          src: "original_b5b32d15930e27d9560a554ddc228686.mp4",
           alt: "Recall secondary still",
         }
       },
       {
         type:"image",
-        src:"original_d8a30b1a8fbaf4f933483303a9fcc9a5.gif",
+        src:"original_d8a30b1a8fbaf4f933483303a9fcc9a5.mp4",
       },
             {
         type: "media-full",
         media: {
           type: "image",
-          src: "original_d8a30b1a8fbaf4f933483303a9fcc9a5.gif",
+          src: "original_d8a30b1a8fbaf4f933483303a9fcc9a5.mp4",
           alt: "Recall secondary still",
         }
       },
@@ -460,7 +460,7 @@ export const projects = [
       },
       {
         type: "image",
-        src: "animazione_procedurale.gif",
+        src: "animazione_procedurale.mp4",
         alt: "Humuscene procedural image",
         caption: "Procedural visual fragment.",
       },
@@ -468,7 +468,7 @@ export const projects = [
     blocks: [
       {
         type: "html",
-        content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1076702543?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Humuscene\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>"
+        content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1076702543?autoplay=1&amp;muted=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Humuscene\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>"
       },
       {
         type: "caption",
@@ -479,7 +479,7 @@ export const projects = [
         items: [
           {
             type: "image",
-            src: "cloud_compare-1.png",
+            src: "cloud_compare-1.webp",
             alt: "Humuscene procedural animation",
             caption: "Procedural animation fragment."
           },
@@ -516,13 +516,13 @@ export const projects = [
     links: [],
     preview: {
       type: "video",
-      src: "f1b3707b1e3682ebbc3a36f2ea25cd5a.mov",
+      src: "f1b3707b1e3682ebbc3a36f2ea25cd5a.mp4",
       alt: "Dicor preview image",
     },
     media: [
       {
         type: "video",
-        src: "f1b3707b1e3682ebbc3a36f2ea25cd5a.mov",
+        src: "f1b3707b1e3682ebbc3a36f2ea25cd5a.mp4",
         alt: "Dicor still",
       },
       {
@@ -539,7 +539,7 @@ export const projects = [
       },
       {
         type:"image",
-        src:"original_05b6e010f6076514f3f91f7369f1e9eb.jpg",
+        src:"original_05b6e010f6076514f3f91f7369f1e9eb.webp",
       },
    ]
     
@@ -560,13 +560,13 @@ export const projects = [
     links: [],
     preview: {
       type: "video",
-      src: "preview.mov",
+      src: "preview.mp4",
       alt: "Radici preview video",
     },
     media: [
       {
         type: "image",
-        src: "DSCF2134.JPG",
+        src: "DSCF2134.webp",
         alt: "Radici still",
         caption: "Installation documentation.",
       },
@@ -578,7 +578,7 @@ export const projects = [
       },
       {
         type: "image",
-        src: "DSC09106.jpg",
+        src: "DSC09106.webp",
         alt: "Radici spatial still",
         caption: "Spatial context view.",
       },
@@ -586,13 +586,13 @@ export const projects = [
     blocks: [
       {
         type: "html",
-        content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1095380945?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"scenografia3\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>"
+        content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1095380945?autoplay=1&amp;muted=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"scenografia3\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"><\/script>"
       },
       {
         type: "media-full",
         media: {
           type: "image",
-          src: "DSC00889.JPG",
+          src: "DSC00889.webp",
           alt: "Radici still",
         }
       },
@@ -612,7 +612,7 @@ export const projects = [
         type: "media-full",
         media: { 
           type: "image",
-          src: "DSC08915.jpg",
+          src: "DSC08915.webp",
           alt: "Radici spatial still",
         }
         },
@@ -620,7 +620,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "DSCF2315.JPG",
+          src: "DSCF2315.webp",
           alt: "Radici spatial still",
         }
       }
@@ -650,7 +650,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "html",
-          content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1084000750?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"theremin 900\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
+          content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1084000750?autoplay=1&amp;muted=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"theremin 900\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
         }
       },
       {
@@ -664,7 +664,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "video",
-          src:"theremin900.mov"
+          src:"theremin900.mp4"
         }
       },
       {
@@ -715,7 +715,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "html",
-          content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1083109260?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Admirari Silva\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
+          content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1083109260?autoplay=1&amp;muted=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Admirari Silva\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
         }
       },
       {
@@ -768,7 +768,7 @@ blocks: [
         type: "media-full",
         media: {
           type: "html",
-          content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1010658953?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Displace input 01 - VISUAL IDENTITY\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
+          content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1010658953?autoplay=1&amp;muted=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Displace input 01 - VISUAL IDENTITY\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
         }
       },
       {
@@ -780,11 +780,11 @@ blocks: [
         items: [
           {
             type: "image",
-            src: "manifesti2.jpg",
+            src: "manifesti2.webp",
           },
           {
             type: "image",
-            src:"manifesti3.jpg",
+            src:"manifesti3.webp",
             alt: "Admirari Silva documentation image",
           }
         ]
@@ -793,7 +793,7 @@ blocks: [
         type: "media-full",
         media: {
           type: "image",
-          src: "BIG-Milano_Dropcity42-3-1.jpg",
+          src: "BIG-Milano_Dropcity42-3-1.webp",
           alt: "Displace Input documentation image",
         }
       },
@@ -801,7 +801,7 @@ blocks: [
         type:"media-full",
         media: {
           type: "image",
-          src: "BIG-Milano_Dropcity42-8.jpg",
+          src: "BIG-Milano_Dropcity42-8.webp",
           alt: "Displace Input documentation image",
         }
       },
@@ -818,105 +818,105 @@ export const visualExperiments = [
   {
     slug: "experiment-01",
     title: "Critical coding cookbook",
-    src: "Esperimenti/Critical_coding_cookbook.png",
+    src: "Esperimenti/Critical_coding_cookbook.webp",
     alt: "Critical coding cookbook visual experiment",
     href:"https://criticalcode.recipes"
   },
   {
     slug: "experiment-02",
     title: "Morphing landscapes",
-    src: "Esperimenti/AI_morphing.gif",
+    src: "Esperimenti/AI_morphing.mp4",
     alt: "Morphing landscapes visual experiment",
     href:"https://d2w9rnfcy7mm78.cloudfront.net/1972759/original_c8e03c976884489bc98ee1854f33f782.gif?1522428860?bc=1"
   },
   {
     slug: "experiment-03",
     title: "Composite Process",
-    src: "Esperimenti/composite_process.gif",
+    src: "Esperimenti/composite_process.mp4",
     alt: "Composite Process visual experiment",
   },
   {
     slug: "experiment-04",
     title: "Cool Spreadsheet- Wilderness Land",
-    src: "Esperimenti/Wild.png",
+    src: "Esperimenti/Wild.webp",
     alt: "Wild visual experiment",
     href:"https://wilderness.land"
   },
   {
     slug: "experiment-05",
     title: "https://coffee.youngjo.com",
-    src: "Esperimenti/coffe.png",
+    src: "Esperimenti/coffe.webp",
     alt: "Coffee sequences visual experiment",
     href:"https://coffee.youngjo.com"
   },
   {
     slug: "experiment-06",
     title: "Archival counciousness",
-    src: "Esperimenti/Archival.png",
+    src: "Esperimenti/Archival.webp",
     alt: "Archival counciousness",
     href: "https://www.archivalconsciousness.org/?fbclid=PAZXh0bgNhZW0CMTEAAacSmGmKUl2f9ZgafqhBNLs3Kk_E2bP3qnDb5DPf5KkPQbOufwhH6DJYAdBL0A_aem_t7Nm59EhwEiwAJqQYRl_DQ"
   },
   {
     slug: "experiment-07",
     title: "Pygmalionproject",
-    src: "Esperimenti/pygmalionproject.png",
+    src: "Esperimenti/pygmalionproject.webp",
     alt: "pygmalionproject",
     href:"https://pygmalionproject.online/C15"
   },
   {
     slug:"direct technique",
     title:"Direct visualization techniques ",
-    src:"Esperimenti/directvix.png",
+    src:"Esperimenti/directvix.webp",
     alt:"Direct technique visual experiment",
     href:"https://ahnp.ub.uni-heidelberg.de/journals/dah/article/view/33529/27217"
   },
   {
     slug:"experiment-08",
     title:"Moss",
-    src:"Esperimenti/moss.png",
+    src:"Esperimenti/moss.webp",
   },
   {
     slug:"experiment-09",
     title:"Moss",
-    src:"Esperimenti/microgreens.png",
+    src:"Esperimenti/microgreens.webp",
   },
   {
     slug:"experiment-10",
     title:"We Built This City On",
-    src:"Esperimenti/We Built This City On.png",
+    src:"Esperimenti/We Built This City On.webp",
     href:"https://everynoise.com/cities.html"
   },
   {
     slug:"python-visualization",
     title:"Python visualization",
-    src:"Esperimenti/output2.gif",
+    src:"Esperimenti/output2.mp4",
     alt:"Python visualization experiment",
     href:"https://example.com/python-visualization"
   },
   {
     slug:"experiment-12",
     title:"Touchdesigner experiments",
-    src:"Esperimenti/output.mov",
+    src:"Esperimenti/output.mp4",
     alt:"Touchdesigner experiments visual experiment",
   },
   {
     slug:"experiment-13",
     title:"Crows sunbathing",
-    src:"Esperimenti/crows.png",
+    src:"Esperimenti/crows.webp",
     alt:"Data visualization experiment",
     href:"https://www.inaturalist.org/observations?place_id=any&subview=map&taxon_id=any"
   },
   {
     slug:"experiment-14",
     title:"AI & conflicts",
-    src:"Esperimenti/Ai.png",
+    src:"Esperimenti/Ai.webp",
     alt:"AI & conflicts visual book cover",
     href:"https://www.krisispublishing.com/prodotto/ai-conflicts-02/"
   },
   {
     slug:"experiment-15",
     title:"CYBERFEMINISM INDEX",
-    src:"Esperimenti/mindyseu.png",
+    src:"Esperimenti/mindyseu.webp",
     alt:"AI & conflicts visual book cover",
     href:"https://cyberfeminismindex.com/"
   },

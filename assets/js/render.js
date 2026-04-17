@@ -15,9 +15,17 @@ function normalizeHtmlMedia(content) {
     return "";
   }
 
-  return content.replace(/<iframe\b([^>]*)>/gi, (match, attrs) => {
-    if (/\bclass\s*=\s*"/i.test(attrs)) {
-      return `<iframe${attrs.replace(/\bclass\s*=\s*"([^"]*)"/i, (classMatch, classNames) => {
+  // Remove duplicate Vimeo player.js script tags
+  let cleaned = content.replace(/<script[^>]*player\.vimeo\.com\/api\/player\.js[^>]*><\/script>/gi, "");
+
+  return cleaned.replace(/<iframe\b([^>]*)>/gi, (match, attrs) => {
+    // Convert src to data-src for lazy loading, add loading="lazy"
+    const lazyAttrs = attrs
+      .replace(/\bsrc\s*=\s*"([^"]*)"/i, 'data-src="$1"')
+      .replace(/\bsrc\s*=\s*'([^']*)'/i, "data-src='$1'");
+
+    if (/\bclass\s*=\s*"/i.test(lazyAttrs)) {
+      return `<iframe loading="lazy"${lazyAttrs.replace(/\bclass\s*=\s*"([^"]*)"/i, (classMatch, classNames) => {
         if (classNames.split(/\s+/).includes("single-project-media")) {
           return classMatch;
         }
@@ -25,7 +33,7 @@ function normalizeHtmlMedia(content) {
       })}>`;
     }
 
-    return `<iframe class="single-project-media"${attrs}>`;
+    return `<iframe class="single-project-media" loading="lazy"${lazyAttrs}>`;
   });
 }
 

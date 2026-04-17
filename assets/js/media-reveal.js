@@ -181,6 +181,9 @@ export function initMediaReveal(root = document) {
         if (el instanceof HTMLVideoElement) {
           activateVideoSource(el);
           watchMediaLoad(el, revealObserver);
+        } else if (el instanceof HTMLIFrameElement && el.dataset.src && !el.getAttribute("src")) {
+          el.src = el.dataset.src;
+          watchMediaLoad(el, revealObserver);
         }
 
         preloadObserver.unobserve(el);
@@ -203,7 +206,7 @@ export function initMediaReveal(root = document) {
       element.style.transition = "none";
     }
 
-    if (element instanceof HTMLVideoElement && element.dataset.src && !element.getAttribute("src")) {
+    if ((element instanceof HTMLVideoElement || element instanceof HTMLIFrameElement) && element.dataset.src && !element.getAttribute("src")) {
       preloadObserver.observe(element);
     } else {
       watchMediaLoad(element, revealObserver);

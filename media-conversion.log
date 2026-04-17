@@ -1,0 +1,542 @@
+=== PORTFOLIO MEDIA CONVERSION STARTED ===
+Date: 2026-04-17 16:05:46
+Directory: /Users/ariannafaccioli/Desktop/Portfolio_2026
+
+[2026-04-17 16:05:46] === PORTFOLIO MEDIA CONVERSION STARTED ===
+[2026-04-17 16:05:46] Directory: /Users/ariannafaccioli/Desktop/Portfolio_2026
+[2026-04-17 16:05:46] 
+>>> Converting MOV files to MP4...
+[2026-04-17 16:05:46] SKIP: theremin900.mp4 already exists
+[2026-04-17 16:05:46] CONVERT: f1b3707b1e3682ebbc3a36f2ea25cd5a.mov → f1b3707b1e3682ebbc3a36f2ea25cd5a.mp4
+[2026-04-17 16:06:47] ✓ DONE: 58.6MB → 43.5MB
+[2026-04-17 16:06:47] CONVERT: preview.mov → preview.mp4
+[2026-04-17 16:07:26] ✓ DONE: 169.8MB → 9.6MB
+[2026-04-17 16:07:26] CONVERT: 09357ad327523e37963714fd834273ad.mov → 09357ad327523e37963714fd834273ad.mp4
+[2026-04-17 16:08:04] ✓ DONE: 51.0MB → 11.2MB
+[2026-04-17 16:08:04] CONVERT: scrolling_x2.mov → scrolling_x2.mp4
+[2026-04-17 16:10:45] ✓ DONE: 406.3MB → 115.4MB
+[2026-04-17 16:10:45] CONVERT: preview.mov → preview.mp4
+[2026-04-17 16:12:56] ✓ DONE: 230.3MB → 117.8MB
+[2026-04-17 16:12:56] CONVERT: ANTEPRIMA_mobile.mov → ANTEPRIMA_mobile.mp4
+[2026-04-17 16:12:57] ✓ DONE: 3.4MB → 201.1KB
+[2026-04-17 16:12:57] CONVERT: preview.mov → preview.mp4
+[2026-04-17 16:14:12] ✓ DONE: 189.2MB → 35.6MB
+[2026-04-17 16:14:12] CONVERT: About_x2.mov → About_x2.mp4
+[2026-04-17 16:15:54] ✓ DONE: 152.7MB → 34.6MB
+[2026-04-17 16:15:54] CONVERT: similarity_x2.mov → similarity_x2.mp4
+[2026-04-17 16:16:44] ✓ DONE: 189.2MB → 35.6MB
+[2026-04-17 16:16:44] 
+>>> Converting GIF files to MP4...
+[2026-04-17 16:16:44] CONVERT: original_a8645100df1f1e32dbd1da85be963689.gif → original_a8645100df1f1e32dbd1da85be963689.mp4
+[2026-04-17 16:16:46] ✓ DONE: 23.3MB → 4.2MB
+[2026-04-17 16:16:46] CONVERT: original_d8a30b1a8fbaf4f933483303a9fcc9a5.gif → original_d8a30b1a8fbaf4f933483303a9fcc9a5.mp4
+[2026-04-17 16:16:46] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_d8a30b1a8fbaf4f933483303a9fcc9a5.gif: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, gif, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_d8a30b1a8fbaf4f933483303a9fcc9a5.gif':
+  Metadata:
+    comment         : GIF converted with https://ezgif.com/video-to-gif
+  Duration: 00:00:22.70, start: 0.000000, bitrate: 4397 kb/s
+  Stream #0:0: Video: gif, bgra, 800x225 [SAR 64:64 DAR 32:9], 10 fps, 10 tbr, 100 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (gif (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x7f9b21e08740] height not divisible by 2 (800x225)
+[vost#0:0/libx264 @ 0x7f9b21e07dc0] [enc:libx264 @ 0x7f9b21e08680] Error while opening encoder - maybe incorrect parameters such as bit_rate, rate, width or height.
+[vf#0:0 @ 0x7f9b23818200] Error sending frames to consumers: Generic error in an external library
+[vf#0:0 @ 0x7f9b23818200] Task finished with error code: -542398533 (Generic error in an external library)
+[vf#0:0 @ 0x7f9b23818200] Terminating thread with return code -542398533 (Generic error in an external library)
+[vost#0:0/libx264 @ 0x7f9b21e07dc0] [enc:libx264 @ 0x7f9b21e08680] Could not open encoder before EOF
+[vost#0:0/libx264 @ 0x7f9b21e07dc0] Task finished with error code: -22 (Invalid argument)
+[vost#0:0/libx264 @ 0x7f9b21e07dc0] Terminating thread with return code -22 (Invalid argument)
+[out#0/mp4 @ 0x7f9b21e06c80] Nothing was written into output file, because at least one of its streams received no packets.
+frame=    0 fps=0.0 q=0.0 Lsize=       0KiB time=N/A bitrate=N/A speed=N/A elapsed=0:00:00.01    
+Conversion failed!
+
+[2026-04-17 16:16:46] CONVERT: original_b5b32d15930e27d9560a554ddc228686.gif → original_b5b32d15930e27d9560a554ddc228686.mp4
+[2026-04-17 16:16:46] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_b5b32d15930e27d9560a554ddc228686.gif: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, gif, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_b5b32d15930e27d9560a554ddc228686.gif':
+  Metadata:
+    comment         : GIF converted with https://ezgif.com/video-to-gif
+  Duration: 00:00:30.00, start: 0.000000, bitrate: 6098 kb/s
+  Stream #0:0: Video: gif, bgra, 800x225 [SAR 64:64 DAR 32:9], 10 fps, 10 tbr, 100 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (gif (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x7faaeb507c00] height not divisible by 2 (800x225)
+[vost#0:0/libx264 @ 0x7faaeb5071c0] [enc:libx264 @ 0x7faaeb507b40] Error while opening encoder - maybe incorrect parameters such as bit_rate, rate, width or height.
+[vf#0:0 @ 0x7faaec808c00] Error sending frames to consumers: Generic error in an external library
+[vf#0:0 @ 0x7faaec808c00] Task finished with error code: -542398533 (Generic error in an external library)
+[vf#0:0 @ 0x7faaec808c00] Terminating thread with return code -542398533 (Generic error in an external library)
+[vost#0:0/libx264 @ 0x7faaeb5071c0] [enc:libx264 @ 0x7faaeb507b40] Could not open encoder before EOF
+[vost#0:0/libx264 @ 0x7faaeb5071c0] Task finished with error code: -22 (Invalid argument)
+[vost#0:0/libx264 @ 0x7faaeb5071c0] Terminating thread with return code -22 (Invalid argument)
+[out#0/mp4 @ 0x7faaeb505fc0] Nothing was written into output file, because at least one of its streams received no packets.
+frame=    0 fps=0.0 q=0.0 Lsize=       0KiB time=N/A bitrate=N/A speed=N/A elapsed=0:00:00.01    
+Conversion failed!
+
+[2026-04-17 16:16:46] CONVERT: AI_morphing.gif → AI_morphing.mp4
+[2026-04-17 16:16:47] ✓ DONE: 3.0MB → 2.0MB
+[2026-04-17 16:16:47] CONVERT: composite_process.gif → composite_process.mp4
+[2026-04-17 16:16:54] ✓ DONE: 49.5MB → 4.4MB
+[2026-04-17 16:16:54] 
+>>> Converting images to WebP...
+[2026-04-17 16:16:54] CONVERT: microgreens.png → microgreens.webp (q:80)
+[2026-04-17 16:16:54] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/microgreens.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/microgreens.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 1418x1896 [SAR 5669:5669 DAR 709:948], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fbef2704f40] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fbef2704f40] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/microgreens.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:54] CONVERT: Archival.png → Archival.webp (q:80)
+[2026-04-17 16:16:54] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Archival.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Archival.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 1688x1694 [SAR 5669:5669 DAR 844:847], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7f8f21a05300] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7f8f21a05300] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Archival.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:54] CONVERT: Critical_coding_cookbook.png → Critical_coding_cookbook.webp (q:80)
+[2026-04-17 16:16:55] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Critical_coding_cookbook.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Critical_coding_cookbook.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 1772x1768 [SAR 5669:5669 DAR 443:442], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7ff463a05340] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7ff463a05340] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Critical_coding_cookbook.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:55] CONVERT: directvix.png → directvix.webp (q:80)
+[2026-04-17 16:16:55] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/directvix.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/directvix.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 1074x1538 [SAR 5669:5669 DAR 537:769], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fd508f19c80] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fd508f19c80] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/directvix.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:55] CONVERT: Wild.png → Wild.webp (q:80)
+[2026-04-17 16:16:55] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Wild.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Wild.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 1772x1682 [SAR 5669:5669 DAR 886:841], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7feb95605340] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7feb95605340] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Wild.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:55] CONVERT: mindyseu.png → mindyseu.webp (q:80)
+[2026-04-17 16:16:55] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/mindyseu.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/mindyseu.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 572x806 [SAR 5669:5669 DAR 22:31], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fd848c053c0] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fd848c053c0] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/mindyseu.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:55] CONVERT: coffe.png → coffe.webp (q:80)
+[2026-04-17 16:16:55] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/coffe.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/coffe.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 1692x1680 [SAR 5669:5669 DAR 141:140], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7f9cdf806000] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7f9cdf806000] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/coffe.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:55] CONVERT: Ai.png → Ai.webp (q:80)
+[2026-04-17 16:16:55] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Ai.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Ai.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 666x1084 [SAR 5669:5669 DAR 333:542], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7f8e83b05d00] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7f8e83b05d00] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Ai.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:55] CONVERT: Moss.png → Moss.webp (q:80)
+[2026-04-17 16:16:55] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Moss.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Moss.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 1370x1766 [SAR 5669:5669 DAR 685:883], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fe03e808440] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fe03e808440] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/Esperimenti/Moss.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:55] CONVERT: cloud_compare-1.png → cloud_compare-1.webp (q:80)
+[2026-04-17 16:16:55] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/05-Humuscene/cloud_compare-1.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/05-Humuscene/cloud_compare-1.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 1500x809 [SAR 3779:3779 DAR 1500:809], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fcd97d05300] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fcd97d05300] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/05-Humuscene/cloud_compare-1.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:55] CONVERT: original_f5859062c54863fcc941d448bdeedba6.png → original_f5859062c54863fcc941d448bdeedba6.webp (q:80)
+[2026-04-17 16:16:55] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/03-Hemstacks/original_f5859062c54863fcc941d448bdeedba6.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/03-Hemstacks/original_f5859062c54863fcc941d448bdeedba6.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 3072x1536, 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fc149013f40] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fc149013f40] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/03-Hemstacks/original_f5859062c54863fcc941d448bdeedba6.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:55] CONVERT: original_042b11871e6036e6350a6bb6c718c36b.png → original_042b11871e6036e6350a6bb6c718c36b.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/03-Hemstacks/original_042b11871e6036e6350a6bb6c718c36b.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/03-Hemstacks/original_042b11871e6036e6350a6bb6c718c36b.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 3584x2072 [SAR 5669:5669 DAR 64:37], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fa637905d00] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fa637905d00] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/03-Hemstacks/original_042b11871e6036e6350a6bb6c718c36b.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: original_a9be37a5a32592853a3ff2fb5c8a3153.png → original_a9be37a5a32592853a3ff2fb5c8a3153.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/03-Hemstacks/original_a9be37a5a32592853a3ff2fb5c8a3153.png: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, png_pipe, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/03-Hemstacks/original_a9be37a5a32592853a3ff2fb5c8a3153.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 2048x1024, 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7f924e309700] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7f924e309700] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/03-Hemstacks/original_a9be37a5a32592853a3ff2fb5c8a3153.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: original_64aec07566dace4ed04986edc499d27c.jpg → original_64aec07566dace4ed04986edc499d27c.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_64aec07566dace4ed04986edc499d27c.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_64aec07566dace4ed04986edc499d27c.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 413833 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 1920x1280, 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fb978605a80] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fb978605a80] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_64aec07566dace4ed04986edc499d27c.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: original_bcade867e664b3cdb9876c55323a44ad.jpg → original_bcade867e664b3cdb9876c55323a44ad.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_bcade867e664b3cdb9876c55323a44ad.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_bcade867e664b3cdb9876c55323a44ad.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 252470 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 1920x1280, 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7f9fff507c00] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7f9fff507c00] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_bcade867e664b3cdb9876c55323a44ad.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: original_2796b02af6a170fcccbd5b1eb8845cd5.jpg → original_2796b02af6a170fcccbd5b1eb8845cd5.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_2796b02af6a170fcccbd5b1eb8845cd5.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_2796b02af6a170fcccbd5b1eb8845cd5.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 412047 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 1920x1280, 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fbeaf104a40] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fbeaf104a40] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/04-Recall/original_2796b02af6a170fcccbd5b1eb8845cd5.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: original_05b6e010f6076514f3f91f7369f1e9eb.jpg → original_05b6e010f6076514f3f91f7369f1e9eb.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/06-Dicor/original_05b6e010f6076514f3f91f7369f1e9eb.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/06-Dicor/original_05b6e010f6076514f3f91f7369f1e9eb.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 155677 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 2000x1332, 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7f847d708340] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7f847d708340] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/06-Dicor/original_05b6e010f6076514f3f91f7369f1e9eb.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: original_d1a1af24f9eef68ee6f05aa6bb0a79c2.jpg → original_d1a1af24f9eef68ee6f05aa6bb0a79c2.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/06-Dicor/original_d1a1af24f9eef68ee6f05aa6bb0a79c2.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/06-Dicor/original_d1a1af24f9eef68ee6f05aa6bb0a79c2.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 172795 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 1332x2000, 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fba8b008980] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fba8b008980] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/06-Dicor/original_d1a1af24f9eef68ee6f05aa6bb0a79c2.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: original_aef5ebbb15016e892bbfbf606297ba82.jpg → original_aef5ebbb15016e892bbfbf606297ba82.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/06-Dicor/original_aef5ebbb15016e892bbfbf606297ba82.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/06-Dicor/original_aef5ebbb15016e892bbfbf606297ba82.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 177352 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 1332x2000, 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fe88fc07400] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fe88fc07400] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/06-Dicor/original_aef5ebbb15016e892bbfbf606297ba82.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: manifesti2.jpg → manifesti2.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/10-Displace_Input/manifesti2.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/10-Displace_Input/manifesti2.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 54549 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 1417x1984 [SAR 72:72 DAR 1417:1984], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fe263805ac0] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fe263805ac0] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/10-Displace_Input/manifesti2.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: manifesti3.jpg → manifesti3.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/10-Displace_Input/manifesti3.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/10-Displace_Input/manifesti3.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 70699 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 1417x1984 [SAR 72:72 DAR 1417:1984], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fe7ae813740] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fe7ae813740] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/10-Displace_Input/manifesti3.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: BIG-Milano_Dropcity42-3-1.jpg → BIG-Milano_Dropcity42-3-1.webp (q:80)
+[2026-04-17 16:16:56] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/10-Displace_Input/BIG-Milano_Dropcity42-3-1.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/10-Displace_Input/BIG-Milano_Dropcity42-3-1.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 46264 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 1500x1000 [SAR 1:1 DAR 3:2], 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fbe2b205c80] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fbe2b205c80] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/10-Displace_Input/BIG-Milano_Dropcity42-3-1.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:56] CONVERT: DSC08915.jpg → DSC08915.webp (q:85)
+[2026-04-17 16:16:57] ERROR: FFmpeg failed for /Users/ariannafaccioli/Desktop/Portfolio_2026/07-Radici/DSC08915.jpg: ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.100 / 60. 26.100
+  libavcodec     62. 28.100 / 62. 28.100
+  libavformat    62. 12.100 / 62. 12.100
+  libavdevice    62.  3.100 / 62.  3.100
+  libavfilter    11. 14.100 / 11. 14.100
+  libswscale      9.  5.100 /  9.  5.100
+  libswresample   6.  3.100 /  6.  3.100
+Input #0, image2, from '/Users/ariannafaccioli/Desktop/Portfolio_2026/07-Radici/DSC08915.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 3287656 kb/s
+  Stream #0:0: Video: mjpeg (Baseline), yuvj444p(pc, bt470bg/unknown/unknown), 6000x4000, 25 fps, 25 tbr, 25 tbn
+[vost#0:0 @ 0x7fda67010840] Unknown encoder 'libwebp'
+[vost#0:0 @ 0x7fda67010840] Error selecting an encoder
+Error opening output file /Users/ariannafaccioli/Desktop/Portfolio_2026/07-Radici/DSC08915.webp.
+Error opening output files: Encoder not found
+
+[2026-04-17 16:16:57] 
+DELETE: Removing duplicate file...
+[2026-04-17 16:16:57] ✓ DONE: Deleted 08-Theremin900/theremin copia.mp4 (164 MB)
+[2026-04-17 16:16:57] 
+=== CONVERSION COMPLETED ===
+[2026-04-17 16:16:57] Log saved to: /Users/ariannafaccioli/Desktop/Portfolio_2026/media-conversion.log
