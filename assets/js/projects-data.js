@@ -291,7 +291,7 @@ export const projects = [
       },
       {
         type: "image",
-        src: "original_2e464e39921b0251e652f37387e6cf07.webp",
+        src: "original_2e464e39921b0251e652f37387e6cf07.jpeg",
         alt: "Hemstacks supporting still",
         caption: "Supporting still."
       },
@@ -313,7 +313,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_f5859062c54863fcc941d448bdeedba6.webp",
+          src: "original_f5859062c54863fcc941d448bdeedba6.jpeg",
           alt: "Hemstacks scenario visualization",
         }
       },
@@ -321,7 +321,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_a9be37a5a32592853a3ff2fb5c8a3153.webp",
+          src: "original_a9be37a5a32592853a3ff2fb5c8a3153.jpeg",
           alt: "Hemstacks environment detail",
         }
       },
@@ -329,7 +329,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_042b11871e6036e6350a6bb6c718c36b.webp",
+          src: "original_042b11871e6036e6350a6bb6c718c36b.jpeg",
           alt: "Hemstacks spatial composition",
         }
       },
@@ -479,7 +479,7 @@ export const projects = [
         items: [
           {
             type: "image",
-            src: "cloud_compare-1.webp",
+            src: "cloud_compare-1.jpeg",
             alt: "Humuscene procedural animation",
             caption: "Procedural animation fragment."
           },
@@ -539,7 +539,7 @@ export const projects = [
       },
       {
         type:"image",
-        src:"original_05b6e010f6076514f3f91f7369f1e9eb.webp",
+        src:"original_05b6e010f6076514f3f91f7369f1e9eb.jpeg",
       },
    ]
     
@@ -566,7 +566,7 @@ export const projects = [
     media: [
       {
         type: "image",
-        src: "DSCF2134.webp",
+        src: "DSCF2134.jpeg",
         alt: "Radici still",
         caption: "Installation documentation.",
       },
@@ -578,7 +578,7 @@ export const projects = [
       },
       {
         type: "image",
-        src: "DSC09106.webp",
+        src: "DSC09106.jpeg",
         alt: "Radici spatial still",
         caption: "Spatial context view.",
       },
@@ -592,7 +592,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "DSC00889.webp",
+          src: "DSC00889.jpeg",
           alt: "Radici still",
         }
       },
@@ -612,7 +612,7 @@ export const projects = [
         type: "media-full",
         media: { 
           type: "image",
-          src: "DSC08915.webp",
+          src: "DSC08915.jpeg",
           alt: "Radici spatial still",
         }
         },
@@ -620,7 +620,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "DSCF2315.webp",
+          src: "DSCF2315.jpeg",
           alt: "Radici spatial still",
         }
       }
@@ -780,11 +780,11 @@ blocks: [
         items: [
           {
             type: "image",
-            src: "manifesti2.webp",
+            src: "manifesti2.jpeg",
           },
           {
             type: "image",
-            src:"manifesti3.webp",
+            src:"manifesti3.jpeg",
             alt: "Admirari Silva documentation image",
           }
         ]
@@ -793,7 +793,7 @@ blocks: [
         type: "media-full",
         media: {
           type: "image",
-          src: "BIG-Milano_Dropcity42-3-1.webp",
+          src: "BIG-Milano_Dropcity42-3-1.jpeg",
           alt: "Displace Input documentation image",
         }
       },
@@ -801,7 +801,7 @@ blocks: [
         type:"media-full",
         media: {
           type: "image",
-          src: "BIG-Milano_Dropcity42-8.webp",
+          src: "BIG-Milano_Dropcity42-8.jpeg",
           alt: "Displace Input documentation image",
         }
       },
@@ -818,7 +818,7 @@ export const visualExperiments = [
   {
     slug: "experiment-01",
     title: "Critical coding cookbook",
-    src: "Esperimenti/Critical_coding_cookbook.webp",
+    src: "Esperimenti/Critical_coding_cookbook.jpeg",
     alt: "Critical coding cookbook visual experiment",
     href:"https://criticalcode.recipes"
   },
@@ -838,52 +838,52 @@ export const visualExperiments = [
   {
     slug: "experiment-04",
     title: "Cool Spreadsheet- Wilderness Land",
-    src: "Esperimenti/Wild.webp",
+    src: "Esperimenti/Wild.jpeg",
     alt: "Wild visual experiment",
     href:"https://wilderness.land"
   },
   {
     slug: "experiment-05",
     title: "https://coffee.youngjo.com",
-    src: "Esperimenti/coffe.webp",
+    src: "Esperimenti/coffe.jpeg",
     alt: "Coffee sequences visual experiment",
     href:"https://coffee.youngjo.com"
   },
   {
     slug: "experiment-06",
     title: "Archival counciousness",
-    src: "Esperimenti/Archival.webp",
+    src: "Esperimenti/Archival.jpeg",
     alt: "Archival counciousness",
     href: "https://www.archivalconsciousness.org/?fbclid=PAZXh0bgNhZW0CMTEAAacSmGmKUl2f9ZgafqhBNLs3Kk_E2bP3qnDb5DPf5KkPQbOufwhH6DJYAdBL0A_aem_t7Nm59EhwEiwAJqQYRl_DQ"
   },
   {
     slug: "experiment-07",
     title: "Pygmalionproject",
-    src: "Esperimenti/pygmalionproject.webp",
+    src: "Esperimenti/pygmalionproject.jpeg",
     alt: "pygmalionproject",
     href:"https://pygmalionproject.online/C15"
   },
   {
     slug:"direct technique",
     title:"Direct visualization techniques ",
-    src:"Esperimenti/directvix.webp",
+    src:"Esperimenti/directvix.jpeg",
     alt:"Direct technique visual experiment",
     href:"https://ahnp.ub.uni-heidelberg.de/journals/dah/article/view/33529/27217"
   },
   {
     slug:"experiment-08",
     title:"Moss",
-    src:"Esperimenti/moss.webp",
+    src:"Esperimenti/moss.jpeg",
   },
   {
     slug:"experiment-09",
     title:"Moss",
-    src:"Esperimenti/microgreens.webp",
+    src:"Esperimenti/microgreens.jpeg",
   },
   {
     slug:"experiment-10",
     title:"We Built This City On",
-    src:"Esperimenti/We Built This City On.webp",
+    src:"Esperimenti/We Built This City On.jpeg",
     href:"https://everynoise.com/cities.html"
   },
   {
@@ -902,21 +902,21 @@ export const visualExperiments = [
   {
     slug:"experiment-13",
     title:"Crows sunbathing",
-    src:"Esperimenti/crows.webp",
+    src:"Esperimenti/crows.jpeg",
     alt:"Data visualization experiment",
     href:"https://www.inaturalist.org/observations?place_id=any&subview=map&taxon_id=any"
   },
   {
     slug:"experiment-14",
     title:"AI & conflicts",
-    src:"Esperimenti/Ai.webp",
+    src:"Esperimenti/Ai.jpeg",
     alt:"AI & conflicts visual book cover",
     href:"https://www.krisispublishing.com/prodotto/ai-conflicts-02/"
   },
   {
     slug:"experiment-15",
     title:"CYBERFEMINISM INDEX",
-    src:"Esperimenti/mindyseu.webp",
+    src:"Esperimenti/mindyseu.jpeg",
     alt:"AI & conflicts visual book cover",
     href:"https://cyberfeminismindex.com/"
   },
