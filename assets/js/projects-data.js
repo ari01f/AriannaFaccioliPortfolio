@@ -484,8 +484,8 @@ export const projects = [
             caption: "Procedural animation fragment."
           },
           {
-            type: "image",
-            src: "animazione_procedurale.gif",
+            type: "video",
+            src: "animazione_procedurale_1.mp4",
             alt: "Humuscene procedural animation 2",
             caption: "Procedural animation fragment."
           }, 
@@ -592,7 +592,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "DSC08915.jpg",
+          src: "DSC00889.JPG",
           alt: "Radici still",
         }
       },
@@ -612,7 +612,7 @@ export const projects = [
         type: "media-full",
         media: { 
           type: "image",
-          src: "DSC09068.jpg",
+          src: "DSC08915.jpg",
           alt: "Radici spatial still",
         }
         },
@@ -620,7 +620,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "DSCF2318.JPG",
+          src: "DSCF2315.JPG",
           alt: "Radici spatial still",
         }
       }
@@ -645,30 +645,48 @@ export const projects = [
       src: "theremin900.mp4",
       alt: "Theremin900 preview",
     },
-    media: [
+    blocks: [
       {
-        type: "video",
-        src: "theremin.mp4",
-        alt: "Theremin900 still",
+        type: "media-full",
+        media: {
+          type: "html",
+          content: "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1084000750?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"theremin 900\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
+        }
       },
       {
-        type: "video",
-        src: "theremin.mp4",
-        alt: "Theremin900 demo",
-        caption: "Demo sequence.",
+        type: "media-full",
+        media: {
+          type: "html",
+          content:""
+        }
       },
       {
-        type: "video",
-        src: "theremin900.mp4",
-        alt: "Theremin900 supporting clip",
-        caption: "Supporting clip.",
+        type: "media-full",
+        media: {
+          type: "video",
+          src:"theremin900.mov"
+        }
       },
       {
-        type:"video",
-        src:"theremin900.mov",
-        caption:"Horizontal and vertical hand movements are translated into amplitude and frequency modulation, while the waveform is visualized in real time through procedural geometry whose scale and position reflect the incoming data. A pinch gesture introduces a second oscillator, layering two sine waves and simultaneously modifying the visual output."
-      }
-    ],
+        type: "caption",
+        content: "The system uses a Leap Motion sensor to track hand movements, translating them into sound and visual output. The interface allows for real-time modulation of sine waves, creating a responsive audiovisual experience that explores the relationship between gesture, sound, and digital matter."
+      },
+      {
+        type: "two-column", 
+        items: [
+          {
+            type: "video",
+            src: "theremin1.mp4",
+            alt: "Theremin900 interaction demo",
+          },
+          {
+            type: "video",
+            src: "theremin2.mp4",
+            alt: "Theremin900 performance footage",
+          }
+        ]
+      }, 
+    ]
   }),
   createProject({
     folder: "09-Admirari_Silva",
