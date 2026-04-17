@@ -735,6 +735,7 @@ h3 {
 .layout-block--html {
   overflow: hidden;
   position: relative;
+  aspect-ratio: 16 / 9;
 }
 
 /* Two-column block */
@@ -856,7 +857,7 @@ h3 {
 
   .project-page-description,
   .identity-bio {
-    max-width: 75%;
+    max-width: 100%;
     width: 100%;
   }
 
@@ -1010,5 +1011,55 @@ h3 {
 
   .project-card-link {
     gap: 0.08rem;
+  }
+
+  /* --- Mobile: text blocks full-width and readable --- */
+  .project-page-description,
+  .identity-bio {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .project-page-intro {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Allow card caption to wrap on small screens */
+  .project-card-caption {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  /* Stack card copy vertically on mobile */
+  .project-card-copy {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .project-chip--year {
+    justify-self: start;
+  }
+
+  /* Caption text full width on mobile */
+  .caption-text {
+    max-width: 100%;
+  }
+
+  /* Two-column grid stacks on mobile */
+  .two-column-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ensure column text is full width */
+  .column-text {
+    width: 100%;
+  }
+
+  /* Project reading reduced top padding */
+  .project-reading {
+    padding-left: var(--pad);
+    padding-right: var(--pad);
   }
 }

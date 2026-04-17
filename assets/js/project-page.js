@@ -1,6 +1,5 @@
 import { getProjectBySlug, siteData } from "./projects-data.js";
 import { renderProjectContent, groupMediaItems, createMedia, renderFloatingLinks, renderProjectBlocks } from "./render.js";
-import { initMediaReveal } from "./media-reveal.js";
 
 const owner = document.querySelector("[data-site-owner]");
 const pageRoot = document.querySelector("[data-project-page]");
@@ -78,6 +77,5 @@ if (!project) {
 
   const sequenceClass = hasBlocks ? "project-sequence-blocks" : "project-sequence";
   pageRoot.innerHTML = `${renderProjectContent(projectPageData)}<section class="${sequenceClass}">${mediaMarkup}</section>`;
-  initMediaReveal(pageRoot);
 }
 

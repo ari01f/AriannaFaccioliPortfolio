@@ -820,6 +820,7 @@ export const visualExperiments = [
     title: "Critical coding cookbook",
     src: "Esperimenti/Critical_coding_cookbook.png",
     alt: "Critical coding cookbook visual experiment",
+    href:"https://criticalcode.recipes"
   },
   {
     slug: "experiment-02",
@@ -831,7 +832,7 @@ export const visualExperiments = [
   {
     slug: "experiment-03",
     title: "Composite Process",
-    src: "Esperimenti/composite_process-2.gif",
+    src: "Esperimenti/composite_process.gif",
     alt: "Composite Process visual experiment",
   },
   {
@@ -876,7 +877,7 @@ export const visualExperiments = [
   },
   {
     slug:"experiment-09",
-    title:"Microgreens",
+    title:"Moss",
     src:"Esperimenti/microgreens.png",
   },
   {
@@ -895,9 +896,8 @@ export const visualExperiments = [
   {
     slug:"experiment-12",
     title:"Touchdesigner experiments",
-    src:"Esperimenti/output.gif",
+    src:"Esperimenti/output.mov",
     alt:"Touchdesigner experiments visual experiment",
-    href:"https://pudding.cool/"
   },
   {
     slug:"experiment-13",
@@ -916,7 +916,7 @@ export const visualExperiments = [
   {
     slug:"experiment-15",
     title:"CYBERFEMINISM INDEX",
-    src:"Esperimenti/Mindy-Seu-Cyberfeminism-Index-01_2000x.webp",
+    src:"Esperimenti/mindyseu.png",
     alt:"AI & conflicts visual book cover",
     href:"https://cyberfeminismindex.com/"
   },
