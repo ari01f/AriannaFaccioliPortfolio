@@ -97,6 +97,87 @@ async function prepareDraggableMedia(rootElement) {
   );
 }
 
+function initOrganicMotion(container) {
+  const items = [...container.querySelectorAll(".draggable-item")];
+  const motionStates = new Map();
+  let animationId = null;
+
+  // Configura il container per contenere gli elementi assoluti
+  container.style.position = "relative";
+  container.style.overflow = "hidden";
+
+  function getRandomMotion() {
+    return {
+      vx: (Math.random() - 0.5) * 2,
+      vy: (Math.random() - 0.5) * 2,
+      x: Math.random() * container.clientWidth,
+      y: Math.random() * container.clientHeight,
+      isAnimating: true,
+    };
+  }
+
+  function updateMotion(item, state) {
+    if (!state.isAnimating) return;
+
+    const itemWidth = item.offsetWidth;
+    const itemHeight = item.offsetHeight;
+
+    // Aggiorna posizione
+    state.x += state.vx;
+    state.y += state.vy;
+
+    // Bounce ai bordi del container
+    if (state.x < 0 || state.x + itemWidth > container.clientWidth) {
+      state.vx *= -1;
+      state.x = Math.max(0, Math.min(state.x, container.clientWidth - itemWidth));
+    }
+    if (state.y < 0 || state.y + itemHeight > container.clientHeight) {
+      state.vy *= -1;
+      state.y = Math.max(0, Math.min(state.y, container.clientHeight - itemHeight));
+    }
+
+    // Applica trasformazione
+    item.style.transform = `translate(${state.x}px, ${state.y}px)`;
+  }
+
+  function animate() {
+    items.forEach((item) => {
+      const state = motionStates.get(item);
+      if (state) {
+        updateMotion(item, state);
+      }
+    });
+    animationId = requestAnimationFrame(animate);
+  }
+
+  // Inizializza stati
+  items.forEach((item) => {
+    motionStates.set(item, getRandomMotion());
+    item.style.position = "absolute";
+    item.style.pointerEvents = "auto";
+
+    // Stop animazione al tocco/drag
+    const stopAnimation = () => {
+      const state = motionStates.get(item);
+      if (state) {
+        state.isAnimating = false;
+      }
+    };
+
+    item.addEventListener("mousedown", stopAnimation);
+    item.addEventListener("touchstart", stopAnimation);
+  });
+
+  // Inizia animazione
+  animate();
+
+  return () => {
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+  };
+}
+
 const root = document.querySelector("[data-visual-experiments]");
 const topLinks = document.querySelector("[data-site-top-links]");
 const activeProjectLabel = document.querySelector("[data-active-project]");
@@ -129,5 +210,6 @@ const canvas = root.querySelector(".visual-experiments-canvas");
 const itemsContainer = root.querySelector(".draggable-items-container");
 if (canvas && itemsContainer) {
   await prepareDraggableMedia(root);
+  initOrganicMotion(itemsContainer);
   initDraggableItems(itemsContainer);
 }

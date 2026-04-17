@@ -300,9 +300,8 @@ export const projects = [
       {
         type: "media-full",
         media: {
-          type: "html",
-          content: "<div style=\"padding:57.53% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1183790980?autoplay=1&amp;muted=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"preview\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
-          alt: "Hemstacks interface view",
+          type: "video",
+          src:"f165baedc12a49ef5537e64511e5e17e.mp4",
         }
       },
       {
@@ -313,7 +312,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_f5859062c54863fcc941d448bdeedba6.jpeg",
+          src: "original_f5859062c54863fcc941d448bdeedba6.png",
           alt: "Hemstacks scenario visualization",
         }
       },
@@ -321,7 +320,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_a9be37a5a32592853a3ff2fb5c8a3153.jpeg",
+          src: "original_a9be37a5a32592853a3ff2fb5c8a3153.png",
           alt: "Hemstacks environment detail",
         }
       },
@@ -329,7 +328,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_042b11871e6036e6350a6bb6c718c36b.jpeg",
+          src: "original_042b11871e6036e6350a6bb6c718c36b.png",
           alt: "Hemstacks spatial composition",
         }
       },
@@ -369,13 +368,13 @@ export const projects = [
         caption: "The project combines generative graphics with sound analysis, creating a flexible system that adapts to both automated and performative contexts.",
       },
       {
-        type: "image",
+        type: "video",
         src: "original_a8645100df1f1e32dbd1da85be963689.mp4",
         alt: "Recall motion fragment",
         caption: "Animated fragment.",
       },
       {
-        type: "image",
+        type: "video",
         src: "original_b5b32d15930e27d9560a554ddc228686.mp4",
         alt: "Recall secondary still",
         caption: "Secondary still.",
@@ -397,7 +396,7 @@ export const projects = [
       {
         type: "media-full",
         media: {
-          type: "image",
+          type: "video",
           src: "original_a8645100df1f1e32dbd1da85be963689.mp4",
           alt: "The visual engine is based on processed video backgrounds that are deliberately degraded through pixelation and synthesis techniques. This transformation reduces the source footage into abstract geometric structures, which are then recomposed and blended according to the rhythm and intensity of the audio input.",
         }
@@ -410,7 +409,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_b5b32d15930e27d9560a554ddc228686.mp4",
+          src: "original_bcade867e664b3cdb9876c55323a44ad.jpg",
           alt: "Recall secondary still",
         }
       },
@@ -418,14 +417,7 @@ export const projects = [
         type:"image",
         src:"original_d8a30b1a8fbaf4f933483303a9fcc9a5.mp4",
       },
-            {
-        type: "media-full",
-        media: {
-          type: "image",
-          src: "original_d8a30b1a8fbaf4f933483303a9fcc9a5.mp4",
-          alt: "Recall secondary still",
-        }
-      },
+    
     
     ]
   }),
@@ -479,7 +471,7 @@ export const projects = [
         items: [
           {
             type: "image",
-            src: "cloud_compare-1.jpeg",
+            src: "cloud_compare-1.png",
             alt: "Humuscene procedural animation",
             caption: "Procedural animation fragment."
           },
@@ -539,7 +531,7 @@ export const projects = [
       },
       {
         type:"image",
-        src:"original_05b6e010f6076514f3f91f7369f1e9eb.jpeg",
+        src:"original_05b6e010f6076514f3f91f7369f1e9eb.jpg",
       },
    ]
     
@@ -563,26 +555,6 @@ export const projects = [
       src: "preview.mp4",
       alt: "Radici preview video",
     },
-    media: [
-      {
-        type: "image",
-        src: "DSCF2134.jpeg",
-        alt: "Radici still",
-        caption: "Installation documentation.",
-      },
-      {
-        type: "video",
-        src: "REGISTRAZIONE TOUCH.mp4",
-        alt: "Radici interaction recording",
-        caption: "Touch interaction sequence.",
-      },
-      {
-        type: "image",
-        src: "DSC09106.jpeg",
-        alt: "Radici spatial still",
-        caption: "Spatial context view.",
-      },
-    ],
     blocks: [
       {
         type: "html",
@@ -592,16 +564,8 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "DSC00889.jpeg",
+          src: "DSC00889.JPG",
           alt: "Radici still",
-        }
-      },
-      {
-        type: "media-full",
-        media: {
-          type: "video",
-          src: "REGISTRAZIONE TOUCH.mp4",
-          alt: "Radici interaction recording",
         }
       },
       {
@@ -612,7 +576,7 @@ export const projects = [
         type: "media-full",
         media: { 
           type: "image",
-          src: "DSC08915.jpeg",
+          src: "DSC08915.jpg",
           alt: "Radici spatial still",
         }
         },
@@ -620,7 +584,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "DSCF2315.jpeg",
+          src: "DSCF2315.JPG",
           alt: "Radici spatial still",
         }
       }
@@ -664,7 +628,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "video",
-          src:"theremin900.mp4"
+          src:"theremin900TD.mp4"
         }
       },
       {
@@ -780,12 +744,12 @@ blocks: [
         items: [
           {
             type: "image",
-            src: "manifesti2.jpeg",
+            src: "manifesti2.jpg",
           },
           {
             type: "image",
-            src:"manifesti3.jpeg",
-            alt: "Admirari Silva documentation image",
+            src:"manifesti3.jpg",
+            
           }
         ]
       },
@@ -793,7 +757,7 @@ blocks: [
         type: "media-full",
         media: {
           type: "image",
-          src: "BIG-Milano_Dropcity42-3-1.jpeg",
+          src: "BIG-Milano_Dropcity42-3-1.jpg",
           alt: "Displace Input documentation image",
         }
       },
@@ -838,52 +802,52 @@ export const visualExperiments = [
   {
     slug: "experiment-04",
     title: "Cool Spreadsheet- Wilderness Land",
-    src: "Esperimenti/Wild.jpeg",
+    src: "Esperimenti/Wild.png",
     alt: "Wild visual experiment",
     href:"https://wilderness.land"
   },
   {
     slug: "experiment-05",
     title: "https://coffee.youngjo.com",
-    src: "Esperimenti/coffe.jpeg",
+    src: "Esperimenti/coffe.png",
     alt: "Coffee sequences visual experiment",
     href:"https://coffee.youngjo.com"
   },
   {
     slug: "experiment-06",
     title: "Archival counciousness",
-    src: "Esperimenti/Archival.jpeg",
+    src: "Esperimenti/Archival.png",
     alt: "Archival counciousness",
     href: "https://www.archivalconsciousness.org/?fbclid=PAZXh0bgNhZW0CMTEAAacSmGmKUl2f9ZgafqhBNLs3Kk_E2bP3qnDb5DPf5KkPQbOufwhH6DJYAdBL0A_aem_t7Nm59EhwEiwAJqQYRl_DQ"
   },
   {
     slug: "experiment-07",
     title: "Pygmalionproject",
-    src: "Esperimenti/pygmalionproject.jpeg",
+    src: "Esperimenti/pygmalionproject.png",
     alt: "pygmalionproject",
     href:"https://pygmalionproject.online/C15"
   },
   {
     slug:"direct technique",
     title:"Direct visualization techniques ",
-    src:"Esperimenti/directvix.jpeg",
+    src:"Esperimenti/directvix.png",
     alt:"Direct technique visual experiment",
     href:"https://ahnp.ub.uni-heidelberg.de/journals/dah/article/view/33529/27217"
   },
   {
     slug:"experiment-08",
     title:"Moss",
-    src:"Esperimenti/moss.jpeg",
+    src:"Esperimenti/moss.png",
   },
   {
     slug:"experiment-09",
     title:"Moss",
-    src:"Esperimenti/microgreens.jpeg",
+    src:"Esperimenti/microgreens.png",
   },
   {
     slug:"experiment-10",
     title:"We Built This City On",
-    src:"Esperimenti/We Built This City On.jpeg",
+    src:"Esperimenti/We Built This City On.png",
     href:"https://everynoise.com/cities.html"
   },
   {
@@ -902,21 +866,21 @@ export const visualExperiments = [
   {
     slug:"experiment-13",
     title:"Crows sunbathing",
-    src:"Esperimenti/crows.jpeg",
+    src:"Esperimenti/crows.png",
     alt:"Data visualization experiment",
     href:"https://www.inaturalist.org/observations?place_id=any&subview=map&taxon_id=any"
   },
   {
     slug:"experiment-14",
     title:"AI & conflicts",
-    src:"Esperimenti/Ai.jpeg",
+    src:"Esperimenti/Ai.png",
     alt:"AI & conflicts visual book cover",
     href:"https://www.krisispublishing.com/prodotto/ai-conflicts-02/"
   },
   {
     slug:"experiment-15",
     title:"CYBERFEMINISM INDEX",
-    src:"Esperimenti/mindyseu.jpeg",
+    src:"Esperimenti/mindyseu.png",
     alt:"AI & conflicts visual book cover",
     href:"https://cyberfeminismindex.com/"
   },

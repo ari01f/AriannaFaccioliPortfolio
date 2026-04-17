@@ -385,7 +385,7 @@ export function renderDraggableVisualExperiments(experiments) {
     <div class="visual-experiments-canvas">
       <section class="visual-experiments-intro-section">
         <div class="visual-experiments-intro-side">
-          <p class="project-page-description visual-experiments-intro-description">A separate set of image-based experiments. These entries are not part of the selected works archive. Drag items to explore the canvas freely.</p>
+          <p class="project-page-description visual-experiments-intro-description">A collection of references, tools, and fragments.<br>Drag to explore.</p>
         </div>
       </section>
       <div class="draggable-items-container">
