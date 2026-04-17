@@ -30,6 +30,13 @@ function getRemovalTarget(element) {
   );
 }
 
+function activateVideoSource(video) {
+  if (video.dataset.src && !video.getAttribute("src")) {
+    video.src = video.dataset.src;
+    video.preload = "metadata";
+  }
+}
+
 function markLoaded(element, observer) {
   if (element.dataset[DATA_FAILED] === "true") {
     return;
@@ -63,7 +70,12 @@ function maybeReveal(element, observer) {
 
   element.classList.add(REVEALED_CLASS);
   element.dataset[DATA_REVEALED] = "true";
-  observer.unobserve(element);
+
+  if (element instanceof HTMLVideoElement && element.dataset.autoplay !== undefined) {
+    element.play().catch(() => {});
+  } else {
+    observer.unobserve(element);
+  }
 }
 
 function watchMediaLoad(element, observer) {
@@ -137,16 +149,46 @@ export function initMediaReveal(root = document) {
     "(prefers-reduced-motion: reduce)",
   ).matches;
 
-  const observer = new IntersectionObserver(
+  const revealObserver = new IntersectionObserver(
     (entries, instance) => {
       entries.forEach((entry) => {
-        entry.target.dataset[DATA_IN_VIEW] = entry.isIntersecting ? "true" : "false";
-        maybeReveal(entry.target, instance);
+        const el = entry.target;
+        el.dataset[DATA_IN_VIEW] = entry.isIntersecting ? "true" : "false";
+
+        if (el instanceof HTMLVideoElement && el.dataset.autoplay !== undefined && el.dataset[DATA_REVEALED] === "true") {
+          if (entry.isIntersecting) {
+            el.play().catch(() => {});
+          } else {
+            el.pause();
+          }
+        }
+
+        maybeReveal(el, instance);
       });
     },
     {
       threshold: 0.18,
       rootMargin: "0px 0px -8% 0px",
+    },
+  );
+
+  const preloadObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+
+        if (el instanceof HTMLVideoElement) {
+          activateVideoSource(el);
+          watchMediaLoad(el, revealObserver);
+        }
+
+        preloadObserver.unobserve(el);
+      });
+    },
+    {
+      threshold: 0,
+      rootMargin: "0px 0px 500px 0px",
     },
   );
 
@@ -161,7 +203,12 @@ export function initMediaReveal(root = document) {
       element.style.transition = "none";
     }
 
-    watchMediaLoad(element, observer);
-    observer.observe(element);
+    if (element instanceof HTMLVideoElement && element.dataset.src && !element.getAttribute("src")) {
+      preloadObserver.observe(element);
+    } else {
+      watchMediaLoad(element, revealObserver);
+    }
+
+    revealObserver.observe(element);
   });
 }

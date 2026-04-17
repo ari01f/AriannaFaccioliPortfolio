@@ -42,12 +42,13 @@ export function createMedia(media, options = {}) {
   const poster = media.poster ? ` poster="${resolveAssetPath(media.poster)}"` : "";
 
   if (media.type === "video") {
+    const autoplayData = autoplay ? ' data-autoplay' : '';
     const autoplayAttrs = autoplay
-      ? ` autoplay${muted ? " muted" : ""}${loop ? " loop" : ""} playsinline`
+      ? `${muted ? " muted" : ""}${loop ? " loop" : ""} playsinline`
       : "";
     const controlsAttr = controls ? " controls" : "";
 
-    return `<video class="single-project-media" src="${source}"${poster} preload="metadata"${autoplayAttrs}${controlsAttr}></video>`;
+    return `<video class="single-project-media" data-src="${source}"${poster} preload="none"${autoplayAttrs}${autoplayData}${controlsAttr}></video>`;
   }
 
   return `<img class="single-project-media" src="${source}" alt="${media.alt || ""}" loading="lazy" />`;

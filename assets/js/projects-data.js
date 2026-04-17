@@ -137,7 +137,7 @@ export const projects = [
     links: [],
     preview: {
       type: "video",
-      src: "filmati/preview.mov",
+      src: "filmati/similarity_x2_light.mp4",
       alt: "Prompted Identities preview",
     },
     media: [
