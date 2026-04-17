@@ -261,21 +261,7 @@ export const projects = [
         type: "caption",
         content: "Users navigate a layered system that progressively reveals environmental strata and species distribution, integrating clustering and filtering to explore biological classifications, endangered species, and invasive dynamics."
       },
-      {
-        type: "two-column",
-        items: [
-          {
-            type: "image",
-            src: "home.png",
-            alt: "Interspecie homepage"
-          },
-          {
-            type: "image",
-            src: "2.jpg",
-            alt: "Interspecie filtering system"
-          }
-        ]
-      }
+      
     ]
   }),
   createProject({
@@ -327,7 +313,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_1980e37e90f766fcaf83854fb6aa7217.png",
+          src: "original_f5859062c54863fcc941d448bdeedba6.png",
           alt: "Hemstacks scenario visualization",
         }
       },
@@ -335,7 +321,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_37ff6ac79ecf99113c41271e24bc0f7d.png",
+          src: "original_a9be37a5a32592853a3ff2fb5c8a3153.png",
           alt: "Hemstacks environment detail",
         }
       },
@@ -343,7 +329,7 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_6556c6ca3810e6309101f71cd714b71a.png",
+          src: "original_042b11871e6036e6350a6bb6c718c36b.png",
           alt: "Hemstacks spatial composition",
         }
       },
@@ -372,13 +358,13 @@ export const projects = [
     links: [],
     preview: {
       type: "image",
-      src: "original_4acb7b4d90f234a99f9e31863fabf02e.jpg",
+      src: "original_2796b02af6a170fcccbd5b1eb8845cd5.jpg",
       alt: "Recall preview",
     },
     media: [
       {
         type: "image",
-        src: "original_2796b02af6a170fcccbd5b1eb8845cd5.jpg",
+        src: "original_64aec07566dace4ed04986edc499d27c.jpg",
         alt: "Recall still",
         caption: "The project combines generative graphics with sound analysis, creating a flexible system that adapts to both automated and performative contexts.",
       },
@@ -390,7 +376,7 @@ export const projects = [
       },
       {
         type: "image",
-        src: "original_dfbfccc49b0074f8f2b700b4ea80162b.jpg",
+        src: "original_b5b32d15930e27d9560a554ddc228686.gif",
         alt: "Recall secondary still",
         caption: "Secondary still.",
       },
@@ -424,14 +410,22 @@ export const projects = [
         type: "media-full",
         media: {
           type: "image",
-          src: "original_bcade867e664b3cdb9876c55323a44ad.jpg",
+          src: "original_b5b32d15930e27d9560a554ddc228686.gif",
           alt: "Recall secondary still",
         }
       },
       {
         type:"image",
-        src:"original_737634f2423a8bd06b197b4983ac9665.jpg",
-      }
+        src:"original_d8a30b1a8fbaf4f933483303a9fcc9a5.gif",
+      },
+            {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "original_d8a30b1a8fbaf4f933483303a9fcc9a5.gif",
+          alt: "Recall secondary still",
+        }
+      },
     
     ]
   }),
