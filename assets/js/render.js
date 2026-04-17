@@ -56,7 +56,7 @@ export function createMedia(media, options = {}) {
       : "";
     const controlsAttr = controls ? " controls" : "";
 
-    return `<video class="single-project-media" data-src="${source}"${poster} preload="metadata" crossorigin="anonymous"${autoplayAttrs}${autoplayData}${controlsAttr}><source type="video/mp4"></video>`;
+    return `<video class="single-project-media" data-src="${source}"${poster} preload="auto" crossorigin="anonymous"${autoplayAttrs}${autoplayData}${controlsAttr} type="video/mp4"></video>`;
   }
 
   return `<img class="single-project-media" src="${source}" alt="${media.alt || ""}" loading="lazy" />`;
@@ -360,7 +360,7 @@ export function renderDraggableVisualExperiments(experiments) {
     if (item.type === "video") {
       const poster = item.poster ? ` poster="${resolveAssetPath(item.poster)}"` : "";
 
-      return `<video class="single-project-media" src="${source}"${poster} preload="metadata" playsinline muted loop autoplay crossorigin="anonymous"><source type="video/mp4"></video>`;
+      return `<video class="single-project-media" src="${source}"${poster} preload="auto" playsinline muted loop autoplay crossorigin="anonymous" type="video/mp4"></video>`;
     }
 
     return `<img class="single-project-media" src="${source}" alt="${item.alt}" loading="lazy" draggable="false" />`;

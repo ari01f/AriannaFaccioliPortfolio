@@ -33,12 +33,9 @@ function getRemovalTarget(element) {
 function activateVideoSource(video) {
   if (video.dataset.src && !video.getAttribute("src")) {
     video.src = video.dataset.src;
-    video.preload = "metadata";
-    // Aggiorna anche il source element per Safari
-    const sourceElement = video.querySelector("source");
-    if (sourceElement) {
-      sourceElement.src = video.dataset.src;
-    }
+    video.preload = "auto";
+    // Forza il browser a ricaricare il video
+    video.load();
   }
 }
 
@@ -108,20 +105,32 @@ function watchMediaLoad(element, observer) {
   }
 
   if (element instanceof HTMLVideoElement) {
-    element.addEventListener(
-      "canplay",
-      () => {
-        markLoaded(element, observer);
-      },
-      { once: true },
-    );
-    element.addEventListener(
-      "error",
-      () => {
-        markFailed(element, observer);
-      },
-      { once: true },
-    );
+    // Su Safari mobile, usa loadedmetadata invece di canplay
+    const isIOSSafari = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const loadEvent = isIOSSafari ? "loadedmetadata" : "canplay";
+    
+    const handleLoad = () => {
+      markLoaded(element, observer);
+      element.removeEventListener(loadEvent, handleLoad);
+      element.removeEventListener("error", handleError);
+    };
+    
+    const handleError = () => {
+      markFailed(element, observer);
+      element.removeEventListener(loadEvent, handleLoad);
+      element.removeEventListener("error", handleError);
+    };
+    
+    element.addEventListener(loadEvent, handleLoad);
+    element.addEventListener("error", handleError);
+    
+    // Timeout di sicurezza: se il video non carica in 15 secondi, marca come failed
+    setTimeout(() => {
+      if (!isMediaLoaded(element) && element.dataset[DATA_LOADED] !== "true") {
+        handleError();
+      }
+    }, 15000);
+    
     return;
   }
 
