@@ -203,8 +203,10 @@ export function initDraggableItems(container) {
     hasMoved = false;
   }
 
-  // Apply initial or saved positions
+  // Apply initial or saved positions (skip if already positioned, e.g. by organic motion)
   items.forEach((item, index) => {
+    if (item.dataset.positioned === "true") return;
+
     const position = initialPositions[index] ?? { x: 0, y: 0 };
     const x = position.x;
     const y = position.y;

@@ -1,9 +1,8 @@
 /* ===== DRAGGABLE VISUAL EXPERIMENTS PAGE ===== */
 
 .page-visual-experiments {
-  overflow: auto;
-  min-height: 100vh;
-  height: auto;
+  overflow: hidden;
+  height: 100vh;
   --pad: clamp(1rem, 3vw, 3rem);
   --text: 20px;
   --ui-text: 20px;
@@ -15,14 +14,20 @@
   --experiment-card-width: clamp(15rem, 24vw, 22rem);
 }
 
+.page-visual-experiments main {
+  height: 100%;
+  overflow: hidden;
+}
+
 .visual-experiments-canvas {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background: var(--bg);
   padding: var(--pad);
-  display: block;
-  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* Container for intro section — matches identity-bio column position */
@@ -49,7 +54,8 @@
 .draggable-items-container {
   position: relative;
   width: 100%;
-  min-height: 120vh;
+  flex: 1;
+  overflow: hidden;
   pointer-events: none;
 }
 
@@ -133,7 +139,7 @@
   }
 
   .draggable-items-container {
-    min-height: 100vh;
+    flex: 1;
   }
 
   .draggable-item-description {
@@ -161,7 +167,7 @@
   }
 
   .draggable-items-container {
-    min-height: 80vh;
+    flex: 1;
   }
 
   .draggable-item-description {

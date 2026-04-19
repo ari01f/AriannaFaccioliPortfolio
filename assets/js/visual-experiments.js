@@ -106,12 +106,16 @@ function initOrganicMotion(container) {
   container.style.position = "relative";
   container.style.overflow = "hidden";
 
-  function getRandomMotion() {
+  function getRandomMotion(item) {
+    const itemWidth = item.offsetWidth || 180;
+    const itemHeight = item.offsetHeight || 180;
+    const maxX = Math.max(container.clientWidth - itemWidth, 0);
+    const maxY = Math.max(container.clientHeight - itemHeight, 0);
     return {
       vx: (Math.random() - 0.5) * 2,
       vy: (Math.random() - 0.5) * 2,
-      x: Math.random() * container.clientWidth,
-      y: Math.random() * container.clientHeight,
+      x: Math.random() * maxX,
+      y: Math.random() * maxY,
       isAnimating: true,
     };
   }
@@ -121,23 +125,37 @@ function initOrganicMotion(container) {
 
     const itemWidth = item.offsetWidth;
     const itemHeight = item.offsetHeight;
+    const maxX = Math.max(container.clientWidth - itemWidth, 0);
+    const maxY = Math.max(container.clientHeight - itemHeight, 0);
 
-    // Aggiorna posizione
-    state.x += state.vx;
-    state.y += state.vy;
+    // Advance position
+    let nextX = state.x + state.vx;
+    let nextY = state.y + state.vy;
 
-    // Bounce ai bordi del container
-    if (state.x < 0 || state.x + itemWidth > container.clientWidth) {
-      state.vx *= -1;
-      state.x = Math.max(0, Math.min(state.x, container.clientWidth - itemWidth));
+    // Bounce horizontally — reflect and preserve speed
+    if (nextX < 0) {
+      nextX = -nextX;
+      state.vx = Math.abs(state.vx);
+    } else if (nextX > maxX) {
+      nextX = maxX - (nextX - maxX);
+      state.vx = -Math.abs(state.vx);
     }
-    if (state.y < 0 || state.y + itemHeight > container.clientHeight) {
-      state.vy *= -1;
-      state.y = Math.max(0, Math.min(state.y, container.clientHeight - itemHeight));
+
+    // Bounce vertically — reflect and preserve speed
+    if (nextY < 0) {
+      nextY = -nextY;
+      state.vy = Math.abs(state.vy);
+    } else if (nextY > maxY) {
+      nextY = maxY - (nextY - maxY);
+      state.vy = -Math.abs(state.vy);
     }
 
-    // Applica trasformazione
-    item.style.transform = `translate(${state.x}px, ${state.y}px)`;
+    // Final safety clamp so nothing ever renders outside bounds
+    state.x = Math.max(0, Math.min(nextX, maxX));
+    state.y = Math.max(0, Math.min(nextY, maxY));
+
+    item.style.left = `${state.x}px`;
+    item.style.top = `${state.y}px`;
   }
 
   function animate() {
@@ -152,8 +170,13 @@ function initOrganicMotion(container) {
 
   // Inizializza stati
   items.forEach((item) => {
-    motionStates.set(item, getRandomMotion());
+    const state = getRandomMotion(item);
+    motionStates.set(item, state);
     item.style.position = "absolute";
+    item.style.left = `${state.x}px`;
+    item.style.top = `${state.y}px`;
+    item.dataset.positioned = "true";
+    item.dataset.preventClick = "false";
     item.style.pointerEvents = "auto";
 
     // Stop animazione al tocco/drag
