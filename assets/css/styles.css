@@ -437,14 +437,31 @@ h3 {
   margin: 0;
 }
 
-/* Reveal animation from each media container center.
-   Uses transform/opacity only, so reserved layout space is stable. */
+/* Placeholder shimmer for lazy-loaded media containers */
+@keyframes media-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 .project-media-shell,
 .project-media,
 .media-container {
   transform-origin: center center;
+  position: relative;
+  background: #f0f0f0;
 }
 
+.project-media-shell:has(video:not([src])),
+.project-media:has(video:not([src])),
+.media-container:has(video:not([src])) {
+  min-height: 12rem;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 37%, #f0f0f0 63%);
+  background-size: 200% 100%;
+  animation: media-shimmer 1.4s ease infinite;
+}
+
+/* Reveal animation from each media container center.
+   Uses transform/opacity only, so reserved layout space is stable. */
 .single-project-media.media-reveal {
   opacity: 0;
   transform: scale(0);
@@ -460,12 +477,26 @@ h3 {
   transform: scale(1);
 }
 
+/* Stop shimmer when media is revealed */
+.project-media-shell:has(.is-revealed),
+.project-media:has(.is-revealed),
+.media-container:has(.is-revealed) {
+  background: none;
+  animation: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .single-project-media.media-reveal,
   .single-project-media.media-reveal.is-revealed {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .project-media-shell:has(video:not([src])),
+  .project-media:has(video:not([src])),
+  .media-container:has(video:not([src])) {
+    animation: none;
   }
 }
 

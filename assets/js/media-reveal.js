@@ -5,6 +5,18 @@ const DATA_LOADED = "mediaLoaded";
 const DATA_IN_VIEW = "mediaInView";
 const DATA_REVEALED = "mediaRevealed";
 const DATA_FAILED = "mediaFailed";
+const DATA_UNLOADED = "mediaUnloaded";
+
+function getPreloadMargin() {
+  const isMobile = window.innerWidth <= 1040;
+  const conn = navigator.connection;
+  if (conn) {
+    if (conn.saveData) return isMobile ? "200px" : "300px";
+    if (conn.effectiveType === "2g" || conn.effectiveType === "slow-2g") return "200px";
+    if (conn.effectiveType === "3g") return isMobile ? "400px" : "600px";
+  }
+  return isMobile ? "600px" : "800px";
+}
 
 function isMediaLoaded(element) {
   if (element instanceof HTMLImageElement) {
@@ -34,9 +46,20 @@ function activateVideoSource(video) {
   if (video.dataset.src && !video.getAttribute("src")) {
     video.src = video.dataset.src;
     video.preload = "auto";
-    // Forza il browser a ricaricare il video
+    video.dataset[DATA_UNLOADED] = "false";
     video.load();
   }
+}
+
+function deactivateVideoSource(video) {
+  if (!video.getAttribute("src")) return;
+  video.pause();
+  video.removeAttribute("src");
+  video.load();
+  video.dataset[DATA_LOADED] = "false";
+  video.dataset[DATA_REVEALED] = "false";
+  video.dataset[DATA_UNLOADED] = "true";
+  video.classList.remove(REVEALED_CLASS);
 }
 
 function markLoaded(element, observer) {
@@ -186,26 +209,29 @@ export function initMediaReveal(root = document) {
     },
   );
 
+  const preloadMargin = getPreloadMargin();
+
   const preloadObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
         const el = entry.target;
 
-        if (el instanceof HTMLVideoElement) {
-          activateVideoSource(el);
-          watchMediaLoad(el, revealObserver);
-        } else if (el instanceof HTMLIFrameElement && el.dataset.src && !el.getAttribute("src")) {
-          el.src = el.dataset.src;
-          watchMediaLoad(el, revealObserver);
+        if (entry.isIntersecting) {
+          if (el instanceof HTMLVideoElement) {
+            activateVideoSource(el);
+            watchMediaLoad(el, revealObserver);
+          } else if (el instanceof HTMLIFrameElement && el.dataset.src && !el.getAttribute("src")) {
+            el.src = el.dataset.src;
+            watchMediaLoad(el, revealObserver);
+          }
+        } else if (el instanceof HTMLVideoElement && el.dataset[DATA_UNLOADED] !== "true") {
+          deactivateVideoSource(el);
         }
-
-        preloadObserver.unobserve(el);
       });
     },
     {
       threshold: 0,
-      rootMargin: "0px 0px 500px 0px",
+      rootMargin: `${preloadMargin} 0px ${preloadMargin} 0px`,
     },
   );
 
@@ -220,7 +246,9 @@ export function initMediaReveal(root = document) {
       element.style.transition = "none";
     }
 
-    if ((element instanceof HTMLVideoElement || element instanceof HTMLIFrameElement) && element.dataset.src && !element.getAttribute("src")) {
+    if (element instanceof HTMLVideoElement && element.dataset.src) {
+      preloadObserver.observe(element);
+    } else if (element instanceof HTMLIFrameElement && element.dataset.src && !element.getAttribute("src")) {
       preloadObserver.observe(element);
     } else {
       watchMediaLoad(element, revealObserver);
