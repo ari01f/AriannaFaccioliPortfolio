@@ -228,12 +228,7 @@ export const projects = [
         alt: "Interspecie still",
         caption: "Data is parsed and reorganized into hybrid spatial categories combining ecological and anthropogenic elements. The system includes clustering logic based on taxonomy, origin, and conservation status, and a scroll-driven structure that progressively reveals environmental layers. Each observation is linked to geolocation and hierarchical biological metadata.",
       },
-      {
-        type:"video",
-        src:"scrolling_x2.mp4",
-        alt: "Interspecie scrolling demo",
-        caption: "Users navigate a layered system that progressively reveals environmental strata and species distribution, integrating clustering and filtering to explore biological classifications, endangered species, and invasive dynamics."
-      },
+     
       
     ],
      blocks: [
@@ -252,8 +247,8 @@ export const projects = [
             {
         type: "media-full",
         media: {
-          type: "video",
-          src: "scrolling_x2.mp4",
+          type: "html",
+          content: "<div style=\"padding:57.53% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1184113759?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"scrolling_x2\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>",
           alt: "Prompted Identities interface still",
         }
       },
@@ -286,6 +281,7 @@ export const projects = [
       {
         type: "video",
         src: "f165baedc12a49ef5537e64511e5e17e.mp4",
+        mobileSrc: "mobile_compressed.mp4",
         alt: "Hemstacks interface view",
         caption: "The project constructs speculative dioramas derived from research texts and articles published on the Antikythera platform.",
       },
@@ -302,6 +298,7 @@ export const projects = [
         media: {
           type: "video",
           src:"f165baedc12a49ef5537e64511e5e17e.mp4",
+          mobileSrc: "mobile_compressed.mp4",
         }
       },
       {
