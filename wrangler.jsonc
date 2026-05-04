@@ -1,8 +1,7 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "arianna-faccioli-portfolio",
   "compatibility_date": "2026-05-04",
   "assets": {
-    "directory": "."
+    "directory": "./public"
   }
 }
