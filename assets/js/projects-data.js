@@ -888,6 +888,16 @@ export const visualExperiments = [
     alt:"Critical field guide to AI",
     href:"https://knowingmachines.org/critical-field-guide"
 
+  },
+  {
+    slug:"experiment-17",   
+    title:"Touch-designer experiment",
+    src:"Esperimenti/TD-drafts.mp4"
+  },
+  {
+    slug:"experiment-18",
+    title:"cybernetic-image",
+    src:"Esperimenti/cybernetic-image.png"
   }
 ];
 

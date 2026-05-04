@@ -354,16 +354,26 @@ export function renderVisualExperimentsPage(experiments) {
  * Each item includes media and description, positioned absolutely for free dragging
  */
 export function renderDraggableVisualExperiments(experiments) {
+  function detectMediaType(item) {
+    if (item.type === "video" || item.type === "image") {
+      return item.type;
+    }
+
+    const src = (item.src || "").toLowerCase();
+    return /\.(mp4|webm|ogg)(\?.*)?$/.test(src) ? "video" : "image";
+  }
+
   function renderDraggableMedia(item) {
     const source = resolveAssetPath(item.src);
+    const mediaType = detectMediaType(item);
 
-    if (item.type === "video") {
+    if (mediaType === "video") {
       const poster = item.poster ? ` poster="${resolveAssetPath(item.poster)}"` : "";
 
       return `<video class="single-project-media" data-src="${source}"${poster} preload="none" playsinline muted loop data-autoplay crossorigin="anonymous" type="video/mp4"></video>`;
     }
 
-    return `<img class="single-project-media" src="${source}" alt="${item.alt}" loading="lazy" decoding="async" draggable="false" />`;
+    return `<img class="single-project-media" src="${source}" alt="${item.alt || item.title || ""}" loading="lazy" decoding="async" draggable="false" />`;
   }
 
   const items = experiments
