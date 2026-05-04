@@ -1,2 +1,10 @@
 .git/
-.git/lfs/
+.git/**
+.git/lfs/**
+node_modules/
+*.mov
+*.mp4
+*.zip
+.DS_Store
+*.psd
+*.ai
