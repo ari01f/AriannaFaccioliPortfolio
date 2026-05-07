@@ -414,6 +414,14 @@ export const projects = [
         type:"image",
         src:"original_d8a30b1a8fbaf4f933483303a9fcc9a5.mp4",
       },
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "original_64aec07566dace4ed04986edc499d27c.jpg",
+          alt: "Recall tertiary still",
+        }
+      }
     
     
     ]
@@ -584,6 +592,14 @@ export const projects = [
           src: "DSCF2315.JPG",
           alt: "Radici spatial still",
         }
+      },
+      {
+        type: "media-full",
+        media: {
+          type: "image",
+          src: "REGISTRAZIONE-TOUCH.gif",
+          alt: "Radici spatial still",
+        }
       }
       
     ],
@@ -647,6 +663,7 @@ export const projects = [
           }
         ]
       }, 
+     
     ]
   }),
   createProject({
