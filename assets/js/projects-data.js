@@ -3,11 +3,14 @@ export const siteData = {
   label: "Interaction designer and creative technologist",
   bio: ` <u>Arianna Faccioli</u> is a multidisciplinary designer based in Bologna. She works across <u>digital design</u>, <u>creative coding</u>, and <u>data visualization</u>, focusing on how generative systems construct imaginaries, identities, and narratives.
 She holds a degree in Industrial Design from the University of Bologna and a Master’s in Interaction Design from the University of the Republic of San Marino.<br> Her practice combines technical experimentation with a critical approach, addressing the cultural and political dimensions of data-driven systems.
-Her work explores how data, space, and sensory experience can be articulated into narrative-driven interactions. Through projects spanning exhibit design, sound design, creative coding, and web-based visual systems, she develops ways to translate complex processes into accessible and engaging visual and spatial experiences.`,
+Her work explores how data, space, and sensory experience can be articulated into narrative-driven interactions. Through projects spanning exhibit design, sound design, creative coding, and web-based visual systems, she develops ways to translate complex processes into accessible and engaging visual and spatial experiences.<br><br>
+<u><a href="mailto:arianna.facciolif01@gmail.com">Mail</a></u><br>
+<u><a href="https://www.linkedin.com/in/arianna-faccioli-12158324a">LinkedIn</a></u><br>
+<u><a href="https://www.instagram.com/ariannafaccioli.design/">Instagram</a></u>`,
   links: [
     { label: "Email", href: "mailto:arianna.facciolif01@gmail.com" },
-    { label: "Instagram", href: "https://www.instagram.com/" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/" },
+    { label: "Instagram", href: "https://www.instagram.com/ariannafaccioli.design/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/arianna-faccioli-12158324a" },
   ],
 };
 
